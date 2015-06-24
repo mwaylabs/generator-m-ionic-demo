@@ -1,0 +1,22 @@
+# temp files
+.DS_Store
+.tmp
+.sass-cache
+
+# npm & bower
+/node_modules/
+/app/bower_components/
+
+# ionic fonts
+/app/main/assets/fonts/ionicons.*
+
+# cordova
+/platforms/
+/plugins/
+
+# build folder
+/www/**
+
+# IDE
+*.sublime-project
+*.sublime-workspace

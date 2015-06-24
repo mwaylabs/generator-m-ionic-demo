@@ -1,0 +1,22 @@
+{
+  "generator-m": {
+    "answers": {
+      "appModule": "myProject",
+      "appName": "My Project",
+      "appId": "com.company.project",
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.7.0",
+        "angular-translate-loader-static-files#~2.7.0",
+        "angular-localForage#~1.2.2"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs"
+      ]
+    }
+  }
+}
