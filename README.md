@@ -1,3 +1,8 @@
+# Templates
+- `#/main/list` - das sidemenu template
+- `#/test` - das blank template
+- `#/tabs/list` - das tabs template
+
 # Generator-M v1.1.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]

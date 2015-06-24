@@ -43,5 +43,5 @@ angular.module('tabs', [
             controller: 'TabsDebugCtrl as ctrl'
           }
         }
-    });
+      });
 });
