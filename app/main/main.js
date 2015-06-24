@@ -47,5 +47,4 @@ angular.module('main', [
           }
         }
       });
-  // TODO: do your thing
 });

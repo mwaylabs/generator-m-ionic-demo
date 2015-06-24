@@ -17,5 +17,4 @@ angular.module('test', [
       // templateUrl: 'test/templates/<someTemplate>.html',
       // controller: 'SomeCtrl as ctrl'
     });
-  // TODO: do your thing
 });
