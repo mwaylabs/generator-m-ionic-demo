@@ -2,5 +2,6 @@
 angular.module('myProject', [
   // your modules
   'main',
-  'test'
+  'test',
+  'tabs'
 ]);

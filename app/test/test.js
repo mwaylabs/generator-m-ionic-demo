@@ -13,8 +13,9 @@ angular.module('test', [
   $stateProvider
     .state('test', {
       url: '/test',
-      templateUrl: 'test/templates/test.html',
-      controller: 'TestCtrl as ctrl'
+      template: '<ion-view view-title="Test"></ion-view>',
+      // templateUrl: 'test/templates/<someTemplate>.html',
+      // controller: 'SomeCtrl as ctrl'
     });
   // TODO: do your thing
 });
