@@ -1,7 +1,7 @@
 # Templates
-- `#/main/list` - das sidemenu template
-- `#/test` - das blank template
-- `#/tabs/list` - das tabs template
+- `#/main/list` - the sidemenu template
+- `#/blank` - the blank template
+- `#/tabs/list` - the tabs template
 
 # Generator-M v1.1.0
 
