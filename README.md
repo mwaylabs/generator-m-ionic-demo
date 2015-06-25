@@ -1,4 +1,14 @@
 # Templates
+
+## To try
+
+Run on your machine:
+- clone
+- `npm install && bower install`
+- (optionally run `cordova prepare` if you want to run it on a device)
+- gulp watch
+
+in your browser navigate to:
 - `#/main/list` - the sidemenu template
 - `#/blank` - the blank template
 - `#/tabs/list` - the tabs template
