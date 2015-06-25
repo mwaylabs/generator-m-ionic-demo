@@ -7,7 +7,7 @@ angular.module('tabs')
   this.ENV = TabsConfig.ENV;
   this.BUILD = TabsConfig.BUILD;
 
-  console.log('Hello from your Controller: TabsCtrl in module tabs:. This is your controller:', this);
+  console.log('Hello from your Controller: TabsDebugCtrl in module tabs:. This is your controller:', this);
   // TODO: do your controller thing
 
 });
