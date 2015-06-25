@@ -3,5 +3,5 @@ angular.module('myProject', [
   // your modules
   'main',
   'blank',
-  'tabs'
+  'tabs',
 ]);
