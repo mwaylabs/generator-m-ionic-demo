@@ -17,9 +17,5 @@ angular.module('blank', [
       template: '<ion-view view-title="blank"></ion-view>',
       // templateUrl: 'blank/templates/<someTemplate>.html',
       // controller: 'SomeCtrl as ctrl'
-      // .state('blank', {
-      //   url: '/blank',
-      //   templateUrl: 'blank/templates/blank.html',
-      //   controller: 'BlankCtrl as ctrl'
     });
 });

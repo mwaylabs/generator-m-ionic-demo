@@ -9,9 +9,8 @@ angular.module('main', [
 
   console.log('Allo! Allo from your module: ' + 'main');
 
-  $urlRouterProvider.otherwise('/main/list');
-
   // ROUTING with ui.router
+  $urlRouterProvider.otherwise('/main/list');
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
     .state('main', {

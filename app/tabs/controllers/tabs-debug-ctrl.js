@@ -2,7 +2,7 @@
 angular.module('tabs')
 .controller('TabsDebugCtrl', function (Tabs, TabsConfig) {
 
-  // bind data from service
+  // bind data from services
   this.someData = Tabs.someData;
   this.ENV = TabsConfig.ENV;
   this.BUILD = TabsConfig.BUILD;
