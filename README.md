@@ -1,19 +1,24 @@
-# Templates
+# Generator-M-Demo
+This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m) v1.2.0.
 
-## To try
+## Why
+This particular repository is a demo projected created with [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [Generator-M](https://github.com/mwaylabs/generator-m) repository.
+
+## Try
 
 Run on your machine:
-- clone
-- `npm install && bower install`
+- clone `git clone git@github.com:mwaylabs/generator-m-demo.git`
+- install dependencies `npm install && bower install`
 - (optionally run `cordova prepare` if you want to run it on a device)
-- gulp watch
+- `gulp watch`
 
 in your browser navigate to:
-- `#/main/list` - the sidemenu template
+- `#/main/list` - the tabs template
 - `#/blank` - the blank template
-- `#/tabs/list` - the tabs template
+- `#/side/list` - the sidemenu template
 
-# Generator-M v1.1.0
+
+# Generator-M v1.2.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m.svg?style=flat-square)][coveralls-url]
@@ -234,7 +239,7 @@ In case your project grows large and you have several modules in your project yo
 
 
 #### gulp build-vars
-Inject variables into your angular app -your `Config` constants which are defined in `app/*/constants/config-const.js` to be exact- during a build.
+Inject variables into your angular app -namely your `Config` constants which are defined in `app/*/constants/config-const.js`- during a build.
 
 Adding the `--buildVars` flag to `gulp build` or any gulp task that runs `gulp build` implicitly, for instance:
 ```sh
@@ -260,6 +265,47 @@ angular.module('main')
   }
 
 });
+```
+
+#### gulp defaults
+Define default flags for each gulp task.
+
+You may have noticed that the Generator-M supplies an extended amount of gulp tasks and flags to modify the behaviour of these tasks. Depending on your project specifics you may find yourself always typing the same flags for the same tasks over and over again. With the `gulp defaults` task you can spare yourself some typing. Here's how it works:
+
+For instance we use `gulp watch --no-open` a lot.
+
+##### setting a default
+Running the following command will create a new `gulp_tasks/.gulp_settings.json` file and save your default flags in it. **Note**: the `.gulp_settings.json` file will be ignored by git, so these settings are only applied locally to your machine. If you want these settings to be part of the repository and share it with your team, simply remove the according line from the `.gitignore` and add `.gulp_setting.json` to your commit.
+
+```sh
+gulp defaults --set='watch --no-open'
+```
+
+What if you still want use a different set of flags from time to time? No worries, we though of that too!
+You can add any amount of **additional command line flags**, they will be merged with your defaults. In the next example `gulp watch` will run with both the `--env-prod` from the command line *and* the `--no-open` flag from your defaults.
+
+```sh
+gulp watch --env=prod ## the --no-open flag will be merged
+```
+
+You can also **overwrite** your task's defaults by explicitly setting the flag to a different value. The value that is explicitly set, will always win:
+
+```sh
+gulp watch --open # will run with --open despite defaults
+```
+
+##### clearing a default
+If on of the defaults is no longer required, running the following command will get rid of it:
+
+```sh
+gulp defaults --clear=watch
+```
+
+##### printing all defaults
+By running `gulp defaults` without a 'set' or 'clear' flag, a comprehensive list of all the defaults that are defined in the `.gulp_settings.json` is shown.
+
+```sh
+gulp defaults
 ```
 
 #### gulp config
@@ -300,8 +346,10 @@ yo m:service <serviceName> <moduleName>
 If you have `gulp watch` running, gulp will automatically inject your new files into your application and they will be available right away.
 
 #### yo m:module - creates a new module
-**Important**: While we are particularly proud of this feature, please note that using modules is only useful in large projects and we recommend that you only use them, if you know why you want to use them in your project.
+**Important**: While we are particularly proud of this feature, please note that using modules is only useful in large projects. We recommend that you only use them, if you know why you want to use them in your project. In our experience for most projects using one module is just fine.
+
 1. `yo m:module <moduleName>` - create a new module
+2. choose your template: `sidemenu`, `tabs` or `blank`
 2. add your module to the `app/app.js`:
 
   ```js
@@ -312,7 +360,10 @@ If you have `gulp watch` running, gulp will automatically inject your new files 
     '<newModuleName>'
   ]);
   ```
-3. navigate to `http://localhost:9000/#/<module-name-in-kebap-case>` in your browser.
+3. restart your `gulp watch` task
+3. in your browser, depending on the template you chose, navigate to `http://localhost:9000/#`
+  - `/<module-name-in-kebap-case>` for `blank` templates
+  - `/<module-name-in-kebap-case>/list` for `sidemenu` and `tabs` templates
 4. **Done!** - see your new module in action!
 
 
@@ -349,7 +400,7 @@ gulp --cordova 'platform add ios --save'
 gulp --cordova 'plugin remove cordova-plugin-camera --save'
 ```
 
-or by typing the following commands every time before you commit:
+or by typing the following commands before you commit:
 
 ```sh
 gulp --cordova 'platform save'

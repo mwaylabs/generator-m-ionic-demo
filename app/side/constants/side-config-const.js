@@ -1,6 +1,6 @@
 'use strict';
-angular.module('tabs')
-.constant('TabsConfig', {
+angular.module('side')
+.constant('SideConfig', {
 
   // gulp environment: injects environment vars
   // https://github.com/mwaylabs/generator-m#gulp-environment

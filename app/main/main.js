@@ -16,31 +16,30 @@ angular.module('main', [
     .state('main', {
       url: '/main',
       abstract: true,
-      templateUrl: 'main/templates/menu.html',
-      controller: 'MenuCtrl as menu'
+      templateUrl: 'main/templates/tabs.html'
     })
       .state('main.list', {
         url: '/list',
         views: {
-          'pageContent': {
+          'tab-list': {
             templateUrl: 'main/templates/list.html',
-            // controller: '<someCtrl> as ctrl'
+            // controller: 'SomeCtrl as ctrl'
           }
         }
       })
       .state('main.listDetail', {
         url: '/list/detail',
         views: {
-          'pageContent': {
+          'tab-list': {
             templateUrl: 'main/templates/list-detail.html',
-            // controller: '<someCtrl> as ctrl'
+            // controller: 'SomeCtrl as ctrl'
           }
         }
       })
       .state('main.debug', {
         url: '/debug',
         views: {
-          'pageContent': {
+          'tab-debug': {
             templateUrl: 'main/templates/debug.html',
             controller: 'DebugCtrl as ctrl'
           }

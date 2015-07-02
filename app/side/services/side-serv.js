@@ -1,8 +1,8 @@
 'use strict';
-angular.module('tabs')
-.service('Tabs', function () {
+angular.module('side')
+.service('Side', function () {
 
-  console.log('Hello from your Service: Tabs in module tabs');
+  console.log('Hello from your Service: Side in module side');
   // TODO: do your service thing
 
   // some initial data

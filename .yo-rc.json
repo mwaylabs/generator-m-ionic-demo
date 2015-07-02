@@ -11,12 +11,14 @@
         "angular-localForage#~1.2.2"
       ],
       "platforms": [
+        "ios",
         "android"
       ],
       "plugins": [
         "cordova-plugin-device",
         "cordova-plugin-dialogs"
-      ]
+      ],
+      "template": "tabs"
     }
   }
 }
