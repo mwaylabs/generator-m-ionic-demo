@@ -14,9 +14,7 @@
 
     <!-- build:css main/styles/app.css -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="blank/styles/module.css">
     <link rel="stylesheet" href="main/styles/module.css">
-    <link rel="stylesheet" href="side/styles/module.css">
     <!-- endinject -->
     <!-- endbuild -->
   </head>
@@ -24,7 +22,7 @@
 
     <!-- the nav bar will be updated as we navigate between views -->
     <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-calm">
+    <ion-nav-bar class="bar-royal">
       <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
@@ -47,22 +45,16 @@
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
     <script src="bower_components/localforage/dist/localforage.js"></script>
     <script src="bower_components/angular-localForage/dist/angular-localForage.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/app.js -->
     <!-- inject:js -->
-    <script src="side/side.js"></script>
-    <script src="side/services/side-serv.js"></script>
-    <script src="side/controllers/side-menu-ctrl.js"></script>
-    <script src="side/controllers/side-debug-ctrl.js"></script>
-    <script src="side/constants/side-config-const.js"></script>
     <script src="main/main.js"></script>
     <script src="main/services/main-serv.js"></script>
     <script src="main/controllers/debug-ctrl.js"></script>
     <script src="main/constants/config-const.js"></script>
-    <script src="blank/blank.js"></script>
-    <script src="blank/constants/blank-config-const.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
     <!-- endbuild -->

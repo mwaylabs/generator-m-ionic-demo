@@ -1,13 +1,23 @@
 'use strict';
 angular.module('main')
-.service('Main', function () {
+.service('Main', function ($log, $timeout) {
 
-  console.log('Hello from your Service: Main in module main');
+  $log.log('Hello from your Service: Main in module main');
   // TODO: do your service thing
 
   // some initial data
   this.someData = {
     binding: 'Yes! Got that databinding working'
+  };
+
+  this.changeBriefly = function () {
+    var initialValue = this.someData.binding;
+    this.someData.binding = 'Yeah this was changed';
+
+    var that = this;
+    $timeout(function () {
+      that.someData.binding = initialValue;
+    }, 500);
   };
 
 });

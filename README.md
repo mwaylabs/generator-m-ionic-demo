@@ -1,24 +1,10 @@
-# Generator-M-Demo
+# Generator-M-Dev
 This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m) v1.2.0.
 
-## Why
-This particular repository is a demo projected created with [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [Generator-M](https://github.com/mwaylabs/generator-m) repository.
+## Why?
+This particular repository is a experimental projected created with very latest version of [Generator-M](https://github.com/mwaylabs/generator-m). This is an experimental repository generated with [Generator-M](https://github.com/mwaylabs/generator-m) and is used to discuss, distribute and implement ideas for the future development of [Generator-M](https://github.com/mwaylabs/generator-m). Please refer any issues and comments to the initial [Generator-M](https://github.com/mwaylabs/generator-m) repository.
 
-## Try
-
-Run on your machine:
-- clone `git clone git@github.com:mwaylabs/generator-m-demo.git`
-- install dependencies `npm install && bower install`
-- (optionally run `cordova prepare` if you want to run it on a device)
-- `gulp watch`
-
-in your browser navigate to:
-- `#/main/list` - the tabs template
-- `#/blank` - the blank template
-- `#/side/list` - the sidemenu template
-
-
-# Generator-M v1.2.0
+# Generator-M Master
 
 [![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m.svg?style=flat-square)][coveralls-url]

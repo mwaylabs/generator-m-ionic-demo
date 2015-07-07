@@ -7,8 +7,6 @@ angular.module('main', [
 ])
 .config(function ($stateProvider, $urlRouterProvider) {
 
-  console.log('Allo! Allo from your module: ' + 'main');
-
   // ROUTING with ui.router
   $urlRouterProvider.otherwise('/main/list');
   $stateProvider
