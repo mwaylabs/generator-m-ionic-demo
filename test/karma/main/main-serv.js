@@ -4,7 +4,7 @@ describe('Service: Main', function () {
 
   // load the service's module
   beforeEach(module('main'));
-  beforeEach(module('myViews'));
+  beforeEach(module('ngHtml2Js'));
 
   // instantiate service
   var Main;
@@ -14,15 +14,6 @@ describe('Service: Main', function () {
     Main = _Main_;
     $timeout = _$timeout_;
     $httpBackend = _$httpBackend_;
-
-    // $httpBackend.whenGET('main/templates/debug.html').respond('<h1></h1>');
-    // $httpBackend.expectGET('main/templates/debug.html');
-    // $httpBackend.whenGET('main/templates/list-detail.html').respond('<h1></h1>');
-    // $httpBackend.expectGET('main/templates/list-detail.html');
-    // $httpBackend.whenGET('main/templates/list.html').respond('<h1></h1>');
-    // $httpBackend.expectGET('main/templates/list.html');
-    // $httpBackend.whenGET('main/templates/tabs.html').respond('<h1></h1>');
-    // $httpBackend.expectGET('main/templates/tabs.html');
   }));
 
   it('should do something', function () {

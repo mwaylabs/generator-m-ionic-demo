@@ -4,6 +4,10 @@
 'use strict';
 
 module.exports = function (config) {
+  // retrieve main files from bower
+  var wiredep = require('wiredep');
+  var bowerFiles = wiredep({devDependencies: true}).js;
+
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -11,34 +15,24 @@ module.exports = function (config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'angular-filesort'],
+
+    // sort app/**/*.js files
+    angularFilesort: {
+      whitelist: [
+        'app/!(bower_components)/**/*.js'
+      ]
+    },
 
     // list of files / patterns to load in the browser
-    files: [
-      // bower
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-animate/angular-animate.js',
-      'app/bower_components/angular-sanitize/angular-sanitize.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'app/bower_components/ionic/release/js/ionic.js',
-      'app/bower_components/ionic/release/js/ionic-angular.js',
-      'app/bower_components/ngCordova/dist/ng-cordova.js',
-      'app/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
-      'app/bower_components/angular-translate/angular-translate.js',
-      'app/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-      'app/bower_components/localforage/dist/localforage.js',
-      'app/bower_components/angular-localForage/dist/angular-localForage.js',
+    files: bowerFiles.concat([
       // other
-      'app/main/main.js',
-      'app/main/services/main-serv.js',
-      'app/main/controllers/debug-ctrl.js',
-      'app/main/constants/config-const.js',
-      'app/app.js',
+      'app/!(bower_components)/**/*.js',
       // test
-      'test/**/*.js',
+      'test/karma/**/*.js',
+      // templates
       'app/**/templates/*.html'
-    ],
+    ]),
 
     // list of files to exclude
     exclude: [],
@@ -46,12 +40,13 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      // use template cache to avoid unexpected $http requests from ui-router
-      // https://github.com/angular-ui/ui-router/issues/212#issuecomment-69974072
       'app/**/templates/*.html': ['ng-html2js']
     },
+
+    // use template cache to avoid unexpected $http requests from ui-router
+    // https://github.com/angular-ui/ui-router/issues/212#issuecomment-69974072
     ngHtml2JsPreprocessor: {
-      moduleName: 'myViews',
+      moduleName: 'ngHtml2Js',
       stripPrefix: 'app/' // the path must be relative to the app.js
     },
 
