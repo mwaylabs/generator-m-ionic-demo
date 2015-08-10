@@ -23,4 +23,5 @@ angular.module('main')
       this.password.strength = 'weak';
     }
   };
+  this.grade();
 });

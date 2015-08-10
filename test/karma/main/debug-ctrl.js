@@ -4,7 +4,7 @@ describe('module: main, controller: DebugCtrl', function () {
 
   // load the service's module
   beforeEach(module('main'));
-  // beforeEach(module('ngHtml2Js'));
+  beforeEach(module('ngHtml2Js'));
 
   // instantiate service
   var DebugCtrl;
@@ -30,7 +30,7 @@ describe('module: main, controller: DebugCtrl', function () {
       expect(DebugCtrl.password.strength).toEqual('medium');
     });
 
-    it('should classify asdfasdfasdf as medium', function () {
+    it('should classify asdfasdfasdf as strong', function () {
       DebugCtrl.password.input = 'asdfasdfasdf';
       DebugCtrl.grade();
       expect(DebugCtrl.password.strength).toEqual('strong');
