@@ -4,7 +4,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var paths = gulp.paths;
-var options = gulp.options;
+
 // plugins
 var $ = require('gulp-load-plugins')();
 // modules
@@ -29,18 +29,15 @@ gulp.task('test:auto', function (done) {
 });
 
 // Downloads the selenium webdriver
-gulp.task('webdriver-update', $.protractor.webdriver_update);
-
-gulp.task('webdriver-standalone', $.protractor.webdriver_standalone);
+var webdriverUpdate = 'webdriver_update';
+var webdriverStandalone = 'webdriver_standalone';
+gulp.task('webdriver-update', $.protractor[webdriverUpdate]);
+gulp.task('webdriver-standalone', $.protractor[webdriverStandalone]);
 
 function runProtractor (done) {
-  var params = process.argv;
-  var args = params.length > 3 ? [params[3], params[4]] : [];
-
   gulp.src(paths.protractor)
     .pipe($.protractor.protractor({
-      configFile: 'protractor.conf.js',
-      args: args
+      configFile: 'protractor.conf.js'
     }))
     .on('error', function (err) {
       // Make sure failed tests cause gulp to exit non-zero

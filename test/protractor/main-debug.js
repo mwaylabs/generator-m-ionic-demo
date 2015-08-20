@@ -1,8 +1,12 @@
 'use strict';
 
-describe('angularjs homepage todo list', function () {
-  it('should grade passwords', function () {
+describe('Debug page', function () {
+
+  beforeEach(function () {
     browser.get('/#/main/debug');
+  });
+
+  it('should grade passwords', function () {
 
     var passwordInput = element(by.model('ctrl.password.input'));
     var passwordStrength = element(by.binding('ctrl.password.strength'));
