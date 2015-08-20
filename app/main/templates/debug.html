@@ -1,4 +1,4 @@
-<ion-view view-title="tabs module">
+<ion-view view-title="main debug">
   <!-- do you want padding? -->
   <ion-content class="padding">
 
@@ -17,12 +17,10 @@
         <img width="75" src="main/assets/images/yo@2x.png">
       </ion-item>
       <ion-item class="item">{{ctrl.someData.binding}}</ion-item>
-
       <ion-item class="item item-divider">Environment variables:</ion-item>
       <ion-item class="item item-text-wrap">
         <pre>{{ctrl.ENV | json}}</pre>
       </ion-item>
-
       <ion-item class="item item-divider">Build variables:</ion-item>
       <ion-item class="item item-text-wrap">
         <pre>{{ctrl.BUILD | json}}</pre>
@@ -47,6 +45,7 @@
           }"
           ng-bind="ctrl.password.strength"></span>
       </ion-item>
+
     </ion-list>
 
   </ion-content>

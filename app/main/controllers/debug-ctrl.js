@@ -2,13 +2,14 @@
 angular.module('main')
 .controller('DebugCtrl', function ($log, Main, Config) {
 
+  $log.log('Hello from your Controller: DebugCtrl in module main:. This is your controller:', this);
+
   // bind data from services
   this.someData = Main.someData;
   this.ENV = Config.ENV;
   this.BUILD = Config.BUILD;
 
-  $log.log('Hello from your Controller: DebugCtrl in module main:. This is your controller:', this);
-
+  // PASSWORD EXAMPLE
   this.password = {
     input: '', // by user
     strength: ''
@@ -24,4 +25,5 @@ angular.module('main')
     }
   };
   this.grade();
+
 });

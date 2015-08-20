@@ -1,8 +1,7 @@
 'use strict';
 angular.module('side')
-.controller('SideMenuCtrl', function () {
+.controller('SideMenuCtrl', function ($log) {
 
-  console.log('Hello from your Controller: SideMenuCtrl in module side:. This is your controller:', this);
-  // TODO: do your controller thing
+  $log.log('Hello from your Controller: SideMenuCtrl in module side:. This is your controller:', this);
 
 });

@@ -3,7 +3,6 @@ angular.module('main')
 .service('Main', function ($log, $timeout) {
 
   $log.log('Hello from your Service: Main in module main');
-  // TODO: do your service thing
 
   // some initial data
   this.someData = {

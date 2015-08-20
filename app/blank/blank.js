@@ -7,8 +7,6 @@ angular.module('blank', [
 ])
 .config(function ($stateProvider) {
 
-  console.log('Allo! Allo from your module: ' + 'blank');
-
   // ROUTING with ui.router
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html

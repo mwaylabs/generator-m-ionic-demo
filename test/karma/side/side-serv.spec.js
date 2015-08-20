@@ -1,28 +1,28 @@
 'use strict';
 
-describe('module: main, service: Main', function () {
+describe('module: side, service: Side', function () {
 
   // load the service's module
-  beforeEach(module('main'));
+  beforeEach(module('side'));
   // load all the templates to prevent unexpected $http requests from ui-router
   beforeEach(module('ngHtml2Js'));
 
   // instantiate service
-  var Main;
+  var Side;
   var $timeout;
-  beforeEach(inject(function (_Main_, _$timeout_) {
-    Main = _Main_;
+  beforeEach(inject(function (_Side_, _$timeout_) {
+    Side = _Side_;
     $timeout = _$timeout_;
   }));
 
   describe('.changeBriefly()', function () {
     beforeEach(function () {
-      Main.changeBriefly();
+      Side.changeBriefly();
     });
     it('should briefly change', function () {
-      expect(Main.someData.binding).toEqual('Yeah this was changed');
+      expect(Side.someData.binding).toEqual('Yeah this was changed');
       $timeout.flush();
-      expect(Main.someData.binding).toEqual('Yes! Got that databinding working');
+      expect(Side.someData.binding).toEqual('Yes! Got that databinding working');
     });
   });
 

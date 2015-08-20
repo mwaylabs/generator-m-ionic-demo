@@ -1,10 +1,10 @@
-'use strict';
+/* jshint -W079 */ // prevent redefinition of $ warning
 
+'use strict';
 // gulp
 var gulp = require('gulp');
 var path = require('path');
 var paths = gulp.paths;
-
 // plugins
 var $ = require('gulp-load-plugins')();
 // modules
