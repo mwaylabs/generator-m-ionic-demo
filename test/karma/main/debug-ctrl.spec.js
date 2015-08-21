@@ -13,7 +13,6 @@ describe('module: main, controller: DebugCtrl', function () {
     DebugCtrl = $controller('DebugCtrl');
   }));
 
-
   describe('.grade()', function () {
 
     it('should classify asd as weak', function () {
