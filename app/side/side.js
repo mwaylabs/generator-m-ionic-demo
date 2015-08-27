@@ -1,10 +1,5 @@
 'use strict';
-angular.module('side', [
-  'ionic',
-  'ngCordova',
-  'ui.router',
-  // TODO: load other modules selected during generation
-])
+angular.module('side', [])
 .config(function ($stateProvider) {
 
   // ROUTING with ui.router

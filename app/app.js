@@ -1,7 +1,10 @@
 'use strict';
 angular.module('myProject', [
-  // load your modules here
+  'ionic',
+  'ngCordova',
+  'ui.router',
+  // load your own modules here
   'main', // starting with the main module
-  'blank',
-  'side'
+  'side',
+  'blank'
 ]);
