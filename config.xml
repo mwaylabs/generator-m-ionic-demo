@@ -27,4 +27,5 @@
     <engine name="android" spec="^4.0.2" />
     <plugin name="cordova-plugin-device" spec="^1.0.1" />
     <plugin name="cordova-plugin-dialogs" spec="^1.1.1" />
+    <plugin name="com.ionic.keyboard" spec="^1.0.4" />
 </widget>

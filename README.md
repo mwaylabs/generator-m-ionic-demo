@@ -126,11 +126,8 @@ For a quick impression head over to https://github.com/mwaylabs/generator-m-demo
   - yo: `npm install --global yo` - http://yeoman.io/
   - gulp: `npm install --global gulp` - http://gulpjs.com/
   - bower: `npm install --global bower` - http://bower.io/
-- Sass http://sass-lang.com/
-  - no need to install in `> v1.1.0` since we're using [gulp-sass](https://github.com/dlmanning/gulp-sass) from now on
-  - for older versions check the old [v1.1.0 README.md](https://github.com/mwaylabs/generator-m/tree/1.1.0)
-- Want to test or run your app on a device ? Then you'll need:
-  - Platform SDKs for cordova. Head over to cordova documentation: [Platform Guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides) or cordova cli: [Requirements](https://github.com/apache/cordova-cli/)
+- In order to run your app on a device, you'll need:
+  - **Platform SDKs** for the ones you are developing for. Head over to cordova documentation: [Platform Guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides) or cordova cli: [Requirements](https://github.com/apache/cordova-cli/)
 
 ### Generator
 
@@ -181,6 +178,7 @@ Livereloads your application when changing/adding/deleting files to immediately 
 ├──  nodes_modules/ - local installation of node modules
 ├──  platforms/     - cordova platforms
 ├──  plugins/       - corodova plugins
+├──  res/           - resources folder for splash screens and app icons
 ├──  test/          - unit and integration tests
 ├──  www/           - your gulp build goes here, cordova starts building from here
 ├──  .bowerrc       - bower configuration
@@ -223,6 +221,11 @@ If you are new to testing your app with protractor, karma and jasmine. Here are 
 **karma**
 - website - http://karma-runner.github.io/
 
+
+## Guides
+- Managing app [icons and splash screens](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/icons_splash_screens.md). Good for different app configurations (beta, production, ...).
+- The contents of the [`config.xml` can be changed programmatically](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/programmatically_change_configxml.md). Good for continuous integration.
+
 ## More gulp tasks
 
 #### gulp --cordova 'run any command'
@@ -234,7 +237,7 @@ Head over to the [cordova cli documentation](http://cordova.apache.org/docs/en/e
 
 #### gulp --cordova 'build-related task'
 
-If you run one of the following cordova commands: `build <platform>`, `run <platform>`, `emulate <platform>` or `prepare <platform>`, `gulp build` will build your app into the www folder, before cordova will take it from there. For instance if you want to test your app on your connected ios device, run:
+If you run one of the following cordova commands: `build <platform>`, `run <platform>`, `emulate <platform>`, 'serve' or `prepare <platform>`, `gulp build` will build your app into the www folder, before cordova will take it from there. For instance if you want to test your app on your connected ios device, run:
 ```sh
 gulp --cordova 'run ios' # runs gulp build, then cordova run ios
 ```
@@ -363,18 +366,6 @@ By running `gulp defaults` without a 'set' or 'clear' flag, a comprehensive list
 ```sh
 gulp defaults
 ```
-
-#### gulp config
-Manages project configuration. Modifies cordova's `config.xml`
-```sh
-gulp config --setVersion=1.1.0
-gulp config --setBuild=12
-gulp config --setBundle=com.new.bundle # USE WITH CARE! (see below)
-gulp config --setName='hello world' # USE WITH CARE! (see below)
-gulp config --setDescription='a small app to make the world a happy place'
-gulp config --setAuthor='Your Name---your@mail.com---http://yourwebsite.com'
-```
-**Important**: When **changing the name** or **bundle identifier** of your project, it may lead to problems with the platform projects. If you have your plugins and platforms managed in the `config.xml` you can avoid this by deleting your `plugins/` and `platforms/` folders and installing them again using `gulp --cordova 'prepare'`. For more information see the **Git integration** section in this document.
 
 ## Running on Windows
 The generator should work just like on unix/mac except there's one difference, when running `gulp --cordova` tasks. They need doublequotes. So write this:
