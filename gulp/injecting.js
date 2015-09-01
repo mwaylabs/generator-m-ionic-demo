@@ -49,16 +49,16 @@ gulp.task('styles', ['clean'], function () {
 gulp.task('wiredep', function () {
 
   return gulp.src('app/index.html')
-     // exclude ionic scss since we're using ionic sass
-    .pipe(wiredep.stream({exclude: ['bower_components/ionic/release/css']}))
+    // we're not excluding the ionic css here
+    .pipe(wiredep.stream())
     .pipe(gulp.dest('app/'));
 });
 
-// copy bower-fonts to do app/main/assets/fonts
-gulp.task('bower-fonts', function () {
-  var DEST = 'app/main/assets/fonts';
-  var fontFiles = mainBowerFiles({filter: /\.(eot|svg|ttf|woff)$/i})
-    .concat('app/main/assets/fonts/**/*');
+// copy bower fonts
+gulp.task('bower-fonts', ['clean'], function () {
+  // to do www/fonts (ionic css requires it to be in this folder)
+  var DEST = 'www/fonts';
+  var fontFiles = mainBowerFiles({filter: /\.(eot|svg|ttf|woff)$/i});
 
   return gulp.src(fontFiles)
     .pipe($.changed(DEST))

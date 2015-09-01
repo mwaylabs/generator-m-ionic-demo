@@ -22,7 +22,7 @@ run test
   - **hint**: `gulp watch` and `gulp protractor` cannot be run at the same time.
 
 
-# Generator-M v1.2.2
+# Generator-M
 
 [![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m.svg?style=flat-square)][coveralls-url]
@@ -223,6 +223,7 @@ If you are new to testing your app with protractor, karma and jasmine. Here are 
 
 
 ## Guides
+- Using Ionic [CSS or SASS](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/ionic_css_or_sass.md)
 - Managing app [icons and splash screens](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/icons_splash_screens.md). Good for different app configurations (beta, production, ...).
 - The contents of the [`config.xml` can be changed programmatically](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/programmatically_change_configxml.md). Good for continuous integration.
 
@@ -478,3 +479,4 @@ Start by reading our:
 
 ## License
 Code licensed under MIT. Docs under Apache 2. PhoneGap is a trademark of Adobe.
+
