@@ -1,12 +1,12 @@
 # Generator-M-Demo
-This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m).
+[![Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-demo.svg?style=flat-square)][daviddm-url]
 
-## Why
-This particular repository is a demo projected created with [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [Generator-M](https://github.com/mwaylabs/generator-m) repository.
+## What's this?
+This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m) .
 
 ## Try
-
 Run on your machine:
+- make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m#prerequisites) installed
 - clone `git clone git@github.com:mwaylabs/generator-m-demo.git`
 - install dependencies `npm install && bower install`
 - `gulp watch`
@@ -20,6 +20,12 @@ run test
 - run `gulp test` to run karma tests
 - run `gulp protractor` to run protractor tests
   - **hint**: `gulp watch` and `gulp protractor` cannot be run at the same time.
+
+
+# Questions?
+Head over to the Generator-M [repository](https://github.com/mwaylabs/generator-m) and check out the documentation. Alternatively you can talk to us:
+
+[![Join the chat at https://gitter.im/mwaylabs/generator-m](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 # Generator-M
@@ -479,4 +485,3 @@ Start by reading our:
 
 ## License
 Code licensed under MIT. Docs under Apache 2. PhoneGap is a trademark of Adobe.
-
