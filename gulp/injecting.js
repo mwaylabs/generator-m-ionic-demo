@@ -71,6 +71,7 @@ gulp.task('bower-fonts', ['clean'], function () {
  * @return {String}     properly formatted string
  */
 var injectFormat = function (obj) {
+  // indentation of 2
   obj = JSON.stringify(obj, null, 2);
   // replace all doublequotes with singlequotes
   obj = obj.replace(/\"/g, '\'');
