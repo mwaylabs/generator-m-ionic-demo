@@ -1,5 +1,3 @@
-/* jshint -W079 */ // prevent redefinition of $ warning
-
 'use strict';
 // gulp
 var gulp = require('gulp');
@@ -78,4 +76,3 @@ gulp.task('serve', ['inject-all'], function () {
 gulp.task('serve-build', ['build'], function () {
   bsInit(['app', '.tmp'], false);
 });
-

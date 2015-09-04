@@ -1,6 +1,3 @@
-// generated on 2015-01-12 using generator-m 0.2.7
-/* jshint -W079 */ // prevent redefinition of $ warning
-
 'use strict';
 var gulp = require('gulp');
 var minimist = require('minimist');
@@ -51,7 +48,7 @@ if (defaults && defaults[task]) {
 // cordova command one of cordova's build commands?
 if (options.cordova) {
   var cmds = ['build', 'run', 'emulate', 'prepare', 'serve'];
-  for (var i = 0, cmd; (cmd = cmds[i]); i++) {
+  for (var i = 0, cmd; ((cmd = cmds[i])); i++) {
     if (options.cordova.indexOf(cmd) >= 0) {
       options.cordovaBuild = true;
       break;
