@@ -8,8 +8,15 @@ This project was generated with the awesome [Generator-M](https://github.com/mwa
 Run on your machine:
 - make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m#prerequisites) installed
 - clone `git clone git@github.com:mwaylabs/generator-m-demo.git`
-- install dependencies `npm install && bower install`
-- `gulp watch`
+  - and install dependencies `npm install && bower install`
+- **OR**
+  - create a new directory
+  - `yo m --skip-prompts` runs the generator with default options
+  - `yo m:module side` - choose sidemenu template
+  - `yo m:module blank` - choose blank template
+  - edit the `app.js` and add the `side` and `blank` module
+- run `gulp watch`
+- **enjoy!**
 
 in your browser navigate to:
 - `#/main/list` - the tabs template
@@ -26,6 +33,7 @@ run test
 Head over to the Generator-M [repository](https://github.com/mwaylabs/generator-m) and check out the documentation. Alternatively you can talk to us:
 
 [![Join the chat at https://gitter.im/mwaylabs/generator-m](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 
 # Generator-M
