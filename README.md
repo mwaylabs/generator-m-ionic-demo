@@ -1,5 +1,11 @@
 # Generator-M-Demo
-[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-demo.svg?style=flat-square)][daviddm-url]
+[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-demo/master.svg?style=flat-square)][daviddm-url]
+
+Development:
+
+[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-demo/dev.svg?style=flat-square)][daviddm-url]
+
+[daviddm-url]: https://david-dm.org/mwaylabs/generator-m
 
 ## What's this?
 This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m) .
