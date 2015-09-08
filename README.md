@@ -1,19 +1,19 @@
-# Generator-M-Demo
-[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-demo/master.svg?style=flat-square)][daviddm-url]
+# Generator-M-Ionic-Demo
+[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/master.svg?style=flat-square)][daviddm-url]
 
 Development:
 
-[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-demo/dev.svg?style=flat-square)][daviddm-url]
+[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/dev.svg?style=flat-square)][daviddm-url]
 
-[daviddm-url]: https://david-dm.org/mwaylabs/generator-m
+[daviddm-url]: https://david-dm.org/mwaylabs/generator-m-ionic-demo
 
 ## What's this?
-This project was generated with the awesome [Generator-M](https://github.com/mwaylabs/generator-m) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m) .
+This project was generated with the awesome [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m-ionic) .
 
 ## Try
 Run on your machine:
-- make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m#prerequisites) installed
-- clone `git clone git@github.com:mwaylabs/generator-m-demo.git`
+- make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m-ionic#prerequisites) installed
+- clone `git clone git@github.com:mwaylabs/generator-m-ionic-demo.git`
   - and install dependencies `npm install && bower install`
 - **OR**
   - create a new directory
@@ -36,9 +36,9 @@ run test
 
 
 # Questions?
-Head over to the Generator-M [repository](https://github.com/mwaylabs/generator-m) and check out the documentation. Alternatively you can talk to us:
+Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/generator-m-ionic) and check out the documentation. Alternatively you can talk to us:
 
-[![Join the chat at https://gitter.im/mwaylabs/generator-m](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 
