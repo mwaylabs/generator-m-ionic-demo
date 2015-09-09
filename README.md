@@ -17,9 +17,9 @@ Run on your machine:
   - and install dependencies `npm install && bower install`
 - **OR**
   - create a new directory
-  - `yo m --skip-prompts` runs the generator with default options
-  - `yo m:module side` - choose sidemenu template
-  - `yo m:module blank` - choose blank template
+  - `yo m-ionic --skip-prompts` runs the generator with default options
+  - `yo m-ionic:module side` - choose sidemenu template
+  - `yo m-ionic:module blank` - choose blank template
   - edit the `app.js` and add the `side` and `blank` module
 - run `gulp watch`
 - **enjoy!**
@@ -42,19 +42,28 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 
 
 
-# Generator-M v1.3.0
+# Generator-M-Ionic
 
-[![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]
-[![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m.svg?style=flat-square)][coveralls-url]
-[![Build Status](https://img.shields.io/travis/mwaylabs/generator-m.svg?style=flat-square)][travis-url]
-[![Dependency Status](http://img.shields.io/david/mwaylabs/generator-m.svg?style=flat-square)][daviddm-url]
+[![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
+[![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m/master.svg?style=flat-square)][coveralls-url]
+[![Build Status](https://img.shields.io/travis/mwaylabs/generator-m/master.svg?style=flat-square)][travis-url]
+[![Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][daviddm-url]
 [![Download Month](http://img.shields.io/npm/dm/generator-m.svg?style=flat-square)][npm-url]
 
-[npm-url]: https://npmjs.org/package/generator-m
+[npm-url]: https://npmjs.org/package/generator-m-ionic
 [coveralls-url]: https://coveralls.io/r/mwaylabs/generator-m?branch=master
 [travis-url]: https://travis-ci.org/mwaylabs/generator-m
-[daviddm-url]: https://david-dm.org/mwaylabs/generator-m
+[daviddm-url]: https://david-dm.org/mwaylabs/generator-m-ionic
 
+Development:
+
+[![Dev Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m/dev.svg?style=flat-square)][coveralls-url]
+[![Dev Build Status](https://img.shields.io/travis/mwaylabs/generator-m/dev.svg?style=flat-square)][travis-url]
+[![Dev Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][daviddm-url]
+
+
+## Looking for Generator-M?
+This is it! We changed the name to better reflect what this generator is all about. Read more [here](https://github.com/mwaylabs/generator-m-ionic/wiki/Name-Change)!
 
 
 ## Why you need it
@@ -122,9 +131,9 @@ an integrated **testing workflow** with:
 
 and many many **features and tools** for your convenience:
 
-- powerful collection of [gulp tasks](https://github.com/mwaylabs/generator-m#more-gulp-tasks)
-- broad selection of [sub-generators](https://github.com/mwaylabs/generator-m#sub-generators)
-- fine tuned [integration with git](https://github.com/mwaylabs/generator-m#git-integration)
+- powerful collection of [gulp tasks](https://github.com/mwaylabs/generator-m-ionic#more-gulp-tasks)
+- broad selection of [sub-generators](https://github.com/mwaylabs/generator-m-ionic#sub-generators)
+- fine tuned [integration with git](https://github.com/mwaylabs/generator-m-ionic#git-integration)
 - sensible defaults for:
   - continuous integration with [Travis CI](https://travis-ci.org/) and [Jenkins CI](https://jenkins-ci.org/)
   - code style checks with [ESLint](http://eslint.org/)
@@ -132,11 +141,11 @@ and many many **features and tools** for your convenience:
 
 
 ## Try the demo
-For a quick impression head over to https://github.com/mwaylabs/generator-m-demo and clone the sample project generated with the latest version of Generator-M.
+For a quick impression head over to https://github.com/mwaylabs/generator-m-ionic-demo and clone the sample project generated with the latest version of Generator-M-Ionic.
 
 
 ## Questions? Talk to us!
-[![Join the chat at https://gitter.im/mwaylabs/generator-m](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Install
 
@@ -152,7 +161,7 @@ For a quick impression head over to https://github.com/mwaylabs/generator-m-demo
 ### Generator
 
 ```sh
-npm install --global generator-m
+npm install --global generator-m-ionic
 ```
 
 
@@ -163,9 +172,9 @@ mkdir myApp && cd $_
 ```
 **run the generator** - and follow the instructions
 ```sh
-yo m
+yo m-ionic
 ```
-**IMPORTANT:** Cordova needs an empty directory to work. Please run any other setup (e.g. `git init`) after running `yo m`.
+**IMPORTANT:** Cordova needs an empty directory to work. Please run any other setup (e.g. `git init`) after running `yo m-ionic`.
 
 ## Get started
 #### gulp watch
@@ -217,7 +226,7 @@ Livereloads your application when changing/adding/deleting files to immediately 
 </pre>
 
 ## Testing
-When setting up your project or using the module, controller, service, directive or filter sub-generator, Generator-M will automatically generate sample test files for that component. These files can be found in the `test/karma` and `test/protractor` directory respectively. To check if all tests are running properly run:
+When setting up your project or using the module, controller, service, directive or filter sub-generator, Generator-M-Ionic will automatically generate sample test files for that component. These files can be found in the `test/karma` and `test/protractor` directory respectively. To check if all tests are running properly run:
 
 ```sh
 gulp karma
@@ -241,11 +250,11 @@ Articles on **testing angular**
 
 
 ## Guides
-- Setting up and working with [ESLint](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/eslint.md)
-- Working with our [SASS integration](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/sass_integration.md)
-- Using Ionic [CSS or SASS](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/ionic_css_or_sass.md)
-- Managing app [icons and splash screens](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/icons_splash_screens.md). Good for different app configurations (beta, production, ...).
-- The contents of the [`config.xml` can be changed programmatically](https://github.com/mwaylabs/generator-m/tree/master/docs/guides/programmatically_change_configxml.md). Good for continuous integration.
+- Setting up and working with [ESLint](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/eslint.md)
+- Working with our [SASS integration](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/sass_integration.md)
+- Using Ionic [CSS or SASS](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ionic_css_or_sass.md)
+- Managing app [icons and splash screens](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/icons_splash_screens.md). Good for different app configurations (beta, production, ...).
+- The contents of the [`config.xml` can be changed programmatically](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md). Good for continuous integration.
 
 ## More gulp tasks
 
@@ -254,7 +263,7 @@ A local wrapper for cordova cli (allows to use different cordova CLI versions in
 ```sh
 gulp --cordova 'plugin ls'
 ```
-Head over to the [cordova cli documentation](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) or their [github page](https://github.com/apache/cordova-cli/) to learn how to use the cordova cli. Remember that when using generator-m you don't need to install cordova globally!
+Head over to the [cordova cli documentation](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) or their [github page](https://github.com/apache/cordova-cli/) to learn how to use the cordova cli. Remember that when using Generator-M-Ionic you don't need to install cordova globally!
 
 #### gulp --cordova 'build-related task'
 
@@ -350,7 +359,7 @@ angular.module('main')
 #### gulp defaults
 Define default flags for each gulp task.
 
-You may have noticed that the Generator-M supplies an extended amount of gulp tasks and flags to modify the behaviour of these tasks. Depending on your project specifics you may find yourself always typing the same flags for the same tasks over and over again. With the `gulp defaults` task you can spare yourself some typing. Here's how it works:
+You may have noticed that the Generator-M-Ionic supplies an extended amount of gulp tasks and flags to modify the behaviour of these tasks. Depending on your project specifics you may find yourself always typing the same flags for the same tasks over and over again. With the `gulp defaults` task you can spare yourself some typing. Here's how it works:
 
 For instance we use `gulp watch --no-open` a lot.
 
@@ -400,24 +409,24 @@ gulp --cordova 'run android' # won't work on windows
 
 ## Sub-generators
 
-#### yo m:...
+#### yo m-ionic:...
 A handy and fast way to create different angular components, handling all the boilerplate for you.
 The `<moduleName>` is optional and defaults to the main module when left blank
 ```sh
-yo m:constant <constantName> <moduleName>
-yo m:controller <controllerName> <moduleName>
-yo m:directive <directiveName> <moduleName>
-yo m:filter <filterName> <moduleName>
-yo m:pair <pairName> <moduleName> # creates controller & template
-yo m:template <templateName> <moduleName>
-yo m:service <serviceName> <moduleName>
+yo m-ionic:constant <constantName> <moduleName>
+yo m-ionic:controller <controllerName> <moduleName>
+yo m-ionic:directive <directiveName> <moduleName>
+yo m-ionic:filter <filterName> <moduleName>
+yo m-ionic:pair <pairName> <moduleName> # creates controller & template
+yo m-ionic:template <templateName> <moduleName>
+yo m-ionic:service <serviceName> <moduleName>
 ```
 If you have `gulp watch` running, gulp will automatically inject your new files into your application and they will be available right away.
 
-#### yo m:module - creates a new module
+#### yo m-ionic:module - creates a new module
 **Important**: While we are particularly proud of this feature, please note that using modules is only useful in large projects. We recommend that you only use them, if you know why you want to use them in your project. In our experience for most projects using one module is just fine.
 
-1. `yo m:module <moduleName>` - create a new module
+1. `yo m-ionic:module <moduleName>` - create a new module
 2. choose your template: `sidemenu`, `tabs` or `blank`
 2. add your module to the `app/app.js`:
 
@@ -477,25 +486,25 @@ gulp --cordova 'plugin save'
 ```
 
 ## Troubleshooting
-If you're experiencing difficulties using the generator please refer to the [Troubleshooting](https://github.com/mwaylabs/generator-m/wiki/Troubleshooting) section in our wiki or [create an issue](https://github.com/mwaylabs/generator-m/issues/new)!
+If you're experiencing difficulties using the generator please refer to the [Troubleshooting](https://github.com/mwaylabs/generator-m-ionic/wiki/Troubleshooting) section in our wiki or [create an issue](https://github.com/mwaylabs/generator-m-ionic/issues/new)!
 
 ## Options for debugging and development
 ```sh
-yo m --appName='App Name' # set appName via CLI
-yo m --skip-welcome-message # skips welcome message
-yo m --skip-sdk # skip adding cordova platforms and plugins (sdk-specific) for travis
-yo m --skip-install # for debugging purposes, no npm and bower install
-yo m --skip-prompts # for debugging purposes, run with predefined answers
-yo m --ios-only # in conjunction with --skip-prompts
-yo m --android-only # in conjunction with --skip-prompts
-yo m --no-cordova # in conjunction with --skip-prompts, no platforms/plugins
+yo m-ionic --appName='App Name' # set appName via CLI
+yo m-ionic --skip-welcome-message # skips welcome message
+yo m-ionic --skip-sdk # skip adding cordova platforms and plugins (sdk-specific) for travis
+yo m-ionic --skip-install # for debugging purposes, no npm and bower install
+yo m-ionic --skip-prompts # for debugging purposes, run with predefined answers
+yo m-ionic --ios-only # in conjunction with --skip-prompts
+yo m-ionic --android-only # in conjunction with --skip-prompts
+yo m-ionic --no-cordova # in conjunction with --skip-prompts, no platforms/plugins
 ```
 
 ## Want to contribute?
 Start by reading our:
 
-1. [Mission Statement](https://github.com/mwaylabs/generator-m/wiki/Mission-Statement)
-1. [Contribution Guide](https://github.com/mwaylabs/generator-m/wiki/Contribution-Guide)
+1. [Mission Statement](https://github.com/mwaylabs/generator-m-ionic/wiki/Mission-Statement)
+1. [Contribution Guide](https://github.com/mwaylabs/generator-m-ionic/wiki/Contribution-Guide)
 
 
 ## License
