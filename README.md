@@ -39,7 +39,7 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-# Generator-M-Ionic v1.3.2
+# Generator-M-Ionic v1.3.4
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
