@@ -21,6 +21,7 @@ Run on your machine:
   - edit the `app.js` and add the `side` and `blank` module
 - run `gulp watch`
 - **enjoy!**
+- your project is now set using the latest version of the generator and with the following [default options](https://github.com/mwaylabs/generator-m-ionic/blob/master/generators/app/sources/sample-answers.js#L7).
 
 in your browser navigate to:
 - `#/main/list` - the tabs template
