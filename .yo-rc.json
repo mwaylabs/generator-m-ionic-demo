@@ -6,8 +6,8 @@
       "appId": "com.company.project",
       "bowerPackages": [
         "angular-dynamic-locale#~0.1.27",
-        "angular-translate#~2.7.2",
-        "angular-translate-loader-static-files#~2.7.2",
+        "angular-translate#~2.8.1",
+        "angular-translate-loader-static-files#~2.8.1",
         "angular-localForage#~1.2.3"
       ],
       "ionicCss": true,

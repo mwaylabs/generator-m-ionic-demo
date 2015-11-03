@@ -39,14 +39,18 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 
 [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+---
 
-# Generator-M-Ionic v1.3.4
+# My Project
+This project was generated with Generator-M-Ionic v1.4.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
+
+# Generator-M-Ionic v1.4.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
 [![Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][travis-url]
 [![Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][daviddm-url]
-[![Download Month](http://img.shields.io/npm/dm/generator-m.svg?style=flat-square)][npm-url]
+[![Download Month](http://img.shields.io/npm/dm/generator-m-ionic.svg?style=flat-square)][npm-url]
 
 [npm-url]: https://npmjs.org/package/generator-m-ionic
 [coveralls-url]: https://coveralls.io/r/mwaylabs/generator-m-ionic?branch=master
@@ -57,12 +61,7 @@ Development:
 
 [![Dev Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][coveralls-url]
 [![Dev Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][travis-url]
-[![Dev Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][daviddm-url]
-
-
-## Looking for Generator-M?
-This is it! We changed the name to better reflect what this generator is all about. Read more [here](https://github.com/mwaylabs/generator-m-ionic/wiki/Name-Change)!
-
+[![Dev Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic/dev)
 
 ## Why you need it
 Build mobile Cordova/PhoneGap apps quickly with the tools you love:
@@ -154,7 +153,7 @@ For a quick impression head over to https://github.com/mwaylabs/generator-m-ioni
   - gulp: `npm install --global gulp` - http://gulpjs.com/
   - bower: `npm install --global bower` - http://bower.io/
 - In order to run your app on a device, you'll need:
-  - **Platform SDKs** for the ones you are developing for. Head over to cordova documentation: [Platform Guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides) or cordova cli: [Requirements](https://github.com/apache/cordova-cli/)
+  - **Platform SDKs** for the ones you are developing for. Head over to cordova documentation: [Platform Guides](http://cordova.apache.org/docs/en/edge/guide/platforms/index.html) or cordova cli: [Requirements](https://github.com/apache/cordova-cli/#requirements)
 
 ### Generator
 
@@ -261,7 +260,7 @@ A local wrapper for cordova cli (allows to use different cordova CLI versions in
 ```sh
 gulp --cordova 'plugin ls'
 ```
-Head over to the [cordova cli documentation](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) or their [github page](https://github.com/apache/cordova-cli/) to learn how to use the cordova cli. Remember that when using Generator-M-Ionic you don't need to install cordova globally!
+Head over to the [cordova cli documentation](http://cordova.apache.org/docs/en/edge/guide/cli/index.html) or their [github page](https://github.com/apache/cordova-cli/) to learn how to use the cordova cli. Remember that when using Generator-M-Ionic you don't need to install cordova globally!
 
 #### gulp --cordova 'build-related task'
 

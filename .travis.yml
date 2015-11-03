@@ -1,5 +1,6 @@
 language: node_js
 node_js:
-  - '0.10'
-install: gulp cordova-install
+  - 'stable'
+  - '0.12'
+install: bower install && gulp --cordova "prepare"
 script: gulp build

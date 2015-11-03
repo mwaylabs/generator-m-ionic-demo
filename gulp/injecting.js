@@ -58,7 +58,7 @@ gulp.task('wiredep', function () {
 gulp.task('bower-fonts', ['clean'], function () {
   // to do www/fonts (ionic css requires it to be in this folder)
   var DEST = 'www/fonts';
-  var fontFiles = mainBowerFiles({filter: /\.(eot|svg|ttf|woff)$/i});
+  var fontFiles = mainBowerFiles({filter: /\.(eot|otf|svg|ttf|woff|woff2)$/i});
 
   return gulp.src(fontFiles)
     .pipe($.changed(DEST))
