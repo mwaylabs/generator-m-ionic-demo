@@ -1,6 +1,6 @@
 'use strict';
 angular.module('side')
-.controller('SideDebugCtrl', function ($log, Side, SideConfig) {
+.controller('SideDebugCtrl', function ($log, Side, SideConfig, $cordovaDevice) {
 
   $log.log('Hello from your Controller: SideDebugCtrl in module side:. This is your controller:', this);
 
@@ -8,6 +8,12 @@ angular.module('side')
   this.someData = Side.someData;
   this.ENV = SideConfig.ENV;
   this.BUILD = SideConfig.BUILD;
+  // get device info
+  ionic.Platform.ready(function () {
+    if (ionic.Platform.isWebView()) {
+      this.device = $cordovaDevice.getDevice();
+    }
+  }.bind(this));
 
   // PASSWORD EXAMPLE
   this.password = {
