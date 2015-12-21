@@ -6,7 +6,8 @@
   },
   "globals": {
     "angular": true,
-    "ionic": true
+    "ionic": true,
+    "localforage": true
   },
   "rules": {
     "no-console": 1
