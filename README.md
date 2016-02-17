@@ -1,46 +1,3 @@
-# Generator-M-Ionic-Demo
-[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/master.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic-demo#info=devDependencies&view=table)
-
-Development:
-
-[![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/dev.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic-demo/dev#info=devDependencies&view=table)
-
-## What's this?
-This project was generated with the awesome [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m-ionic) .
-
-## Try
-Run on your machine:
-- make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m-ionic#prerequisites) installed
-- clone `git clone git@github.com:mwaylabs/generator-m-ionic-demo.git`
-  - and install dependencies `npm install && bower install`
-- **OR**
-  - create a new directory
-  - `yo m-ionic --skip-prompts` runs the generator with default options
-  - `yo m-ionic:module side` - choose sidemenu template
-  - `yo m-ionic:module blank` - choose blank template
-  - edit the `app.js` and add the `side` and `blank` module
-- run `gulp watch`
-- **enjoy!**
-- your project is now set using the latest version of the generator and with the following [default options](https://github.com/mwaylabs/generator-m-ionic/blob/master/generators/app/sources/sample-answers.js#L7).
-
-in your browser navigate to:
-- `#/main/list` - the tabs template
-- `#/side/list` - the sidemenu template
-- `#/blank` - the blank template
-
-run test
-- run `gulp test` to run karma tests
-- run `gulp protractor` to run protractor tests
-  - **hint**: `gulp watch` and `gulp protractor` cannot be run at the same time.
-
-
-# Questions?
-Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/generator-m-ionic) and check out the documentation. Alternatively you can talk to us:
-
-[![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
----
-
 # My Project
 This project was generated with Generator-M-Ionic v1.5.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
@@ -105,20 +62,18 @@ Yeoman, Gulp, Bower, AngularJS, Ionic & of course Cordova. All in one sexy gener
   </a>
 </p>
 
+## Introduction
+- More on: [Why you need it](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/why_you_need_it.md)
+- More on: [What's in the box](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/whats_in_the_box.md)
 
 ## Quick Start
-- [Quick Start](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/0_quick_start.md) for the experienced developer.
+- [Quick Start](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/quick_start.md) for the experienced developer.
 - [Try the demo](https://github.com/mwaylabs/generator-m-ionic-demo). Get a quick impression by cloning the sample project generated with the latest version of Generator-M-Ionic.
 
-## Introduction
-- More on: [Why you need it](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/0_why_you_need_it.md)
-- More on: [What's in the box](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/1_whats_in_the_box.md)
-
 ## Get started
-- [Installation and Prerequisites](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/0_installation_prerequisites.md)
-- [Generate your app](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/0_generate_app.md)
-- [File structure](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/1_file_structure.md)
-- [Development Introduction](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/2_development_intro.md)
+- [Installation and Prerequisites](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/installation_prerequisites.md)
+- [Development Introduction](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/development_intro.md)
+- [File structure](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/start/file_structure.md)
 
 ## Guides
 
@@ -132,7 +87,6 @@ Yeoman, Gulp, Bower, AngularJS, Ionic & of course Cordova. All in one sexy gener
 - [SASS integration](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/sass_integration.md) in our module concept.
 - [Bower Component Usage](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/bower_component_usage.md) in our module concept.
 - [Gulp defaults](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/gulp_defaults.md), spare power users some tedious typing on the command line.
-- [Tips & Tricks](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/tips_tricks.md) for working with the generator.
 
 **Quality**
 - [ESLint](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/eslint.md) code style checks and setting up your IDE/Editor.
@@ -154,16 +108,12 @@ We've published 3 blog articles on our company blog delivering deep insights int
   - the **origins** of the generator development and **company strategy**
 
 
-## Questions? Talk to us!
-- Read the [FAQ](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/faq.md)
-- Join the chat at [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
-
-
-## Running into issues?
+## Questions, Issues? Talk to us!
 Do the following:
  1. check out our [FAQ](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/faq.md) and [issues](https://github.com/mwaylabs/generator-m-ionic/issues) see if there already is a solution or answer to that matter.
- 2. ask other developers and our core team on [gitter](https://gitter.im/mwaylabs/generator-m-ionic) if you're not sure how to proceed.
+ 2. [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  ask other developers and our core team on [gitter](https://gitter.im/mwaylabs/generator-m-ionic) if you're not sure how to proceed.
  3. If all fails create a [new issue](https://github.com/mwaylabs/generator-m-ionic/issues/new).
+- **Important**: we and others can help you a lot quicker if you provide a sample repo that we can clone. With step by step instructions on how to reproduce your error.
 
 ## Want to contribute?
 Start by reading our:
