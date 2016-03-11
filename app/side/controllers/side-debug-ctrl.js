@@ -1,6 +1,6 @@
 'use strict';
 angular.module('side')
-.controller('SideDebugCtrl', function ($log, Side, SideConfig, $cordovaDevice) {
+.controller('SideDebugCtrl', function ($log, $http, $timeout, Side, SideConfig, $cordovaDevice) {
 
   $log.log('Hello from your Controller: SideDebugCtrl in module side:. This is your controller:', this);
 
@@ -31,5 +31,22 @@ angular.module('side')
     }
   };
   this.grade();
+
+  // Proxy
+  this.proxyState = 'ready';
+  this.proxyRequestUrl = SideConfig.ENV.SOME_OTHER_URL + '/get';
+
+  this.proxyTest = function () {
+    this.proxyState = '...';
+
+    $http.get(this.proxyRequestUrl)
+    .then(function (response) {
+      $log.log(response);
+      this.proxyState = 'success (result printed to browser console)';
+    }.bind(this))
+    .then($timeout(function () {
+      this.proxyState = 'ready';
+    }.bind(this), 6000));
+  };
 
 });
