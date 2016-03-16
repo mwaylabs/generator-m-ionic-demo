@@ -20,7 +20,8 @@
         "cordova-plugin-dialogs",
         "ionic-plugin-keyboard"
       ],
-      "template": "tabs"
+      "template": "tabs",
+      "ecosystems": []
     }
   }
 }
