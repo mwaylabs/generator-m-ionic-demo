@@ -20,6 +20,6 @@
     "angular-sanitize": "~1.5.0",
     "angular-ui-router": "~0.2.15"
   },
-  "name": "My Project",
+  "name": "my-project",
   "private": true
 }
