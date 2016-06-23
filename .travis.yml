@@ -2,15 +2,15 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - v6
-  - v5
-  - v4
+  - "6"
+  - "5"
+  - "4"
 addons:
   apt:
     sources:
       - google-chrome
     packages:
-      - google-chrome-stable
+      - google-chrome-beta
 before_install:
   - npm install -g bower
 # # Special config for Chrome on Travis-CI
