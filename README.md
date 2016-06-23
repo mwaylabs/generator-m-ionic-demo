@@ -8,28 +8,29 @@ Development:
 ## What's this?
 This project was generated with the awesome [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m-ionic) .
 
-## Try
-Run on your machine:
+## Run on your machine
+#### By cloning
 - make sure you have all the [prerequisites](https://github.com/mwaylabs/generator-m-ionic#prerequisites) installed
 - clone `git clone git@github.com:mwaylabs/generator-m-ionic-demo.git`
   - and install dependencies `npm install && bower install`
-- **OR**
+
+#### By using yo m-ionic
   - create a new directory
   - `yo m-ionic --skip-prompts` runs the generator with default options
   - `yo m-ionic:module side` - choose sidemenu template
   - `yo m-ionic:module blank` - choose blank template
   - edit the `app.js` and add the `side` and `blank` module
-- run `gulp watch`
 - **enjoy!**
 - your project is now set using the latest version of the generator and with the following [default options](https://github.com/mwaylabs/generator-m-ionic/blob/master/generators/app/sources/sample-answers.js#L7).
 
-in your browser navigate to:
+## Explore
+Run `gulp watch` and in your browser navigate to:
 - `#/main/list` - the tabs template
 - `#/side/list` - the sidemenu template
 - `#/blank` - the blank template
 
-run test
-- run `gulp test` to run karma tests
+Run tests:
+- run `gulp karma` to run karma tests
 - run `gulp protractor` to run protractor tests
   - **hint**: `gulp watch` and `gulp protractor` cannot be run at the same time.
 
