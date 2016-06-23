@@ -22,14 +22,6 @@ function Patcher (projectRoot, platforms) {
 
 }
 
-Patcher.prototype.addCSP = function () {
-  this.platforms.forEach(function (platform) {
-    var platWWWFolder = browserSyncPrimitives.getWWWFolder(platform);
-    var platformIndexLocal = path.join(this.projectRoot, platWWWFolder, 'index.html');
-    browserSyncPrimitives.addCSP(platformIndexLocal);
-  }, this);
-};
-
 Patcher.prototype.copyStartPage = function (servers) {
   this.platforms.forEach(function (platform) {
     var dest = path.join(this.projectRoot, browserSyncPrimitives.getWWWFolder(platform), START_PAGE);
@@ -56,7 +48,6 @@ Patcher.prototype.patch = function (opts) {
   if (this.platforms.indexOf('ios') !== -1) {
     browserSyncPrimitives.fixATS(this.projectRoot, this.getProjectName());
   }
-  this.addCSP();
 };
 
 module.exports = Patcher;
