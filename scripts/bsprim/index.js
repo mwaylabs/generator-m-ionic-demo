@@ -9,11 +9,11 @@ var updateConfigXml = require('./updateConfigXml');
 var isPlatformSupported = require('./isPlatformSupported');
 
 module.exports = {
-	addCSP: addCSP,
-	createIndexHtml: createIndexHtml,
-	fixATS: fixATS,
-	startBrowserSync: startBrowserSync,
-	getWWWFolder: getWWWFolder,
-	updateConfigXml: updateConfigXml,
-	isPlatformSupported: isPlatformSupported
+  addCSP: addCSP,
+  createIndexHtml: createIndexHtml,
+  fixATS: fixATS,
+  startBrowserSync: startBrowserSync,
+  getWWWFolder: getWWWFolder,
+  updateConfigXml: updateConfigXml,
+  isPlatformSupported: isPlatformSupported
 };

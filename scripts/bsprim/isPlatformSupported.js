@@ -2,12 +2,12 @@
 
 
 function isPlatformSupported(platform) {
-	var supportedPlatforms = {
-		android: true,
-		ios: true
-	};
+  var supportedPlatforms = {
+    android: true,
+    ios: true
+  };
 
-	return platform in supportedPlatforms;
+  return platform in supportedPlatforms;
 }
 
 

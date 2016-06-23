@@ -10,21 +10,21 @@ var getWWWFolder = require('./getWWWFolder');
  * files when they are served from platform folders
  */
 function monkeyPatch() {
-	var script = function() {
-		window.__karma__ = true;
-		(function patch() {
-			if (typeof window.__bs === 'undefined') {
-				window.setTimeout(patch, 500);
-			} else {
-				var oldCanSync = window.__bs.prototype.canSync;
-				window.__bs.prototype.canSync = function(data, optPath) {
-					data.url = window.location.pathname.substr(0, window.location.pathname.indexOf('/www')) + data.url.substr(data.url.indexOf('/www'))
-					return oldCanSync.apply(this, [data, optPath]);
-				};
-			}
-		}());
-	};
-	return '<script>(' + script.toString() + '());</script>';
+  var script = function() {
+    window.__karma__ = true;
+    (function patch() {
+      if (typeof window.__bs === 'undefined') {
+        window.setTimeout(patch, 500);
+      } else {
+        var oldCanSync = window.__bs.prototype.canSync;
+        window.__bs.prototype.canSync = function(data, optPath) {
+          data.url = window.location.pathname.substr(0, window.location.pathname.indexOf('/www')) + data.url.substr(data.url.indexOf('/www'))
+          return oldCanSync.apply(this, [data, optPath]);
+        };
+      }
+    }());
+  };
+  return '<script>(' + script.toString() + '());</script>';
 }
 
 
@@ -36,59 +36,59 @@ function monkeyPatch() {
  * @param {Function} cb - A callback when server is ready, calls with (err, servr_hostname)
  */
 function startBrowserSync(cordovaDir, platforms, opts, cb) {
-	var defaults = {
-		logFileChanges: true,
-		logConnections: true,
-		open: false,
-		snippetOptions: {
-			rule: {
-				match: /<\/body>/i,
-				fn: function(snippet, match) {
-					return monkeyPatch() + snippet + match;
-				}
-			}
-		},
-		minify: false,
-		watchOptions: {},
-		files: [],
-		server: {
-			baseDir: [],
-			routes: {}
-		}
-	};
+  var defaults = {
+    logFileChanges: true,
+    logConnections: true,
+    open: false,
+    snippetOptions: {
+      rule: {
+        match: /<\/body>/i,
+        fn: function(snippet, match) {
+          return monkeyPatch() + snippet + match;
+        }
+      }
+    },
+    minify: false,
+    watchOptions: {},
+    files: [],
+    server: {
+      baseDir: [],
+      routes: {}
+    }
+  };
 
-	platforms.forEach(function(platform) {
-		var www = getWWWFolder(platform);
-		defaults.server.baseDir.push(path.join(www));
-		defaults.server.routes['/' + www] = path.join(cordovaDir, www);
-	});
+  platforms.forEach(function(platform) {
+    var www = getWWWFolder(platform);
+    defaults.server.baseDir.push(path.join(www));
+    defaults.server.routes['/' + www] = path.join(cordovaDir, www);
+  });
 
-    opts = opts || {};
-	if (typeof opts === 'function') {
-		opts = opts(defaults);
-	} else {
-		for (var key in defaults) {
-			if (typeof opts[key] === 'undefined') {
-				opts[key] = defaults[key];
-			}
-		}
-	}
+  opts = opts || {};
+  if (typeof opts === 'function') {
+    opts = opts(defaults);
+  } else {
+    for (var key in defaults) {
+      if (typeof opts[key] === 'undefined') {
+        opts[key] = defaults[key];
+      }
+    }
+  }
 
-	var bsInstance = BrowserSync.create('cordova-browsersync');
-	bsInstance.init(opts, function(err, callbackBsInstance) {
-		var urls = callbackBsInstance.options.getIn(['urls']);
-		var servers = {};
-		['local', 'external', 'tunnel'].forEach(function(type) {
-			servers[type] = urls.get(type);
-		});
+  var bsInstance = BrowserSync.create('cordova-browsersync');
+  bsInstance.init(opts, function(err, callbackBsInstance) {
+    var urls = callbackBsInstance.options.getIn(['urls']);
+    var servers = {};
+    ['local', 'external', 'tunnel'].forEach(function(type) {
+      servers[type] = urls.get(type);
+    });
 
-        cb(err, {
-        	bsInstance: bsInstance,
-        	servers: servers
-        });
-	});
+    cb(err, {
+      bsInstance: bsInstance,
+      servers: servers
+    });
+  });
 
-	return bsInstance;
+  return bsInstance;
 }
 
 
