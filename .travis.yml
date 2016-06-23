@@ -4,4 +4,7 @@ node_js:
   - v6
   - v5
   - v4
-install: npm install && bower install && gulp --cordova "prepare"
+before_script:
+  - npm install -g bower
+  - bower install
+install: npm install && bower install
