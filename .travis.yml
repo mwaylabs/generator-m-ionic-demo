@@ -14,9 +14,9 @@ before_install:
   - npm install -g bower
 # # Special config for Chrome on Travis-CI
  # - export CHROME_BIN=/usr/bin/google-chrome
- - export DISPLAY=:99.0
- - sh -e /etc/init.d/xvfb start
- - sleep 3 # give xvfb some time to start
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3 # give xvfb some time to start
 #  - sudo apt-get update
 #  - sudo apt-get install -y libappindicator1 fonts-liberation
 #  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
