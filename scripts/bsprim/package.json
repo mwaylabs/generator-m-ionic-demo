@@ -1,0 +1,100 @@
+{
+  "_args": [
+    [
+      "cordova-browsersync-primitives",
+      "/Users/jonathan/Projects/generator-m-ionic-demo"
+    ]
+  ],
+  "_from": "cordova-browsersync-primitives@latest",
+  "_id": "cordova-browsersync-primitives@1.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-browsersync-primitives",
+  "_nodeVersion": "4.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-browsersync-primitives-1.1.1.tgz_1456262936762_0.5572582047898322"
+  },
+  "_npmUser": {
+    "email": "github@pointsource.com",
+    "name": "pointsource"
+  },
+  "_npmVersion": "3.3.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-browsersync-primitives",
+    "raw": "cordova-browsersync-primitives",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-browsersync-primitives/-/cordova-browsersync-primitives-1.1.1.tgz",
+  "_shasum": "6427914145b287b5f815a605986e6ecbd75800e4",
+  "_shrinkwrap": null,
+  "_spec": "cordova-browsersync-primitives",
+  "_where": "/Users/jonathan/Projects/generator-m-ionic-demo",
+  "author": {
+    "email": "andre.asselin@pointsource.com",
+    "name": "Andre Asselin"
+  },
+  "bugs": {
+    "url": "https://github.com/pointsource/cordova-browsersync-primitives/issues"
+  },
+  "contributors": [
+    {
+      "email": "andre.asselin@pointsource.com",
+      "name": "Andre Asselin"
+    },
+    {
+      "email": "code@nparashuram.com",
+      "name": "Parashuram"
+    }
+  ],
+  "dependencies": {
+    "browser-sync": ">=2.11",
+    "cheerio": "0.x",
+    "csp-parse": "0.x",
+    "elementtree": "0.x",
+    "plist": "1.x"
+  },
+  "description": "Various tweaks needed to enable browsersync for cordova apps",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6427914145b287b5f815a605986e6ecbd75800e4",
+    "tarball": "https://registry.npmjs.org/cordova-browsersync-primitives/-/cordova-browsersync-primitives-1.1.1.tgz"
+  },
+  "files": [
+    "*"
+  ],
+  "gitHead": "d4ae212210f4417b7f16ee161acbf98327a7325d",
+  "homepage": "https://github.com/pointsource/cordova-browsersync-primitives#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "browser sync"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "github@pointsource.com",
+      "name": "pointsource"
+    }
+  ],
+  "name": "cordova-browsersync-primitives",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pointsource/cordova-browsersync-primitives.git"
+  },
+  "scripts": {},
+  "version": "1.1.1"
+}
