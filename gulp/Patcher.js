@@ -3,6 +3,7 @@
 var path = require('path');
 var fs = require('fs');
 var et = require('elementtree'); // also included in gen-m/package.json
+var chalk = require('chalk');
 
 function Patcher (projectRoot) {
   this.projectRoot = projectRoot || '.';
@@ -25,6 +26,7 @@ Patcher.prototype.patchConfigXml = function (externalUrl) {
     // retrieve platform's path to config.xml & parse it
     var configXmlPath = path.join(this.projectRoot, 'platforms', platform, CONFIG_LOCATION[platform], 'config.xml');
     var configXml = this.parseXml(configXmlPath);
+    console.log(chalk.green('patching ') + configXmlPath);
 
     // set content src attrib to externalUrl
     var contentTag = configXml.find('content[@src]');
