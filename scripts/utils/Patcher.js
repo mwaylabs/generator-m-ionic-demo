@@ -38,9 +38,8 @@ Patcher.prototype.getProjectName = function () {
   return nameTag.text;
 };
 
-Patcher.prototype.patch = function (opts) {
-  opts = opts || {};
-  this.copyStartPage(opts.servers);
+Patcher.prototype.patch = function (servers) {
+  this.copyStartPage(servers);
   this.updateConfigXml();
 };
 
