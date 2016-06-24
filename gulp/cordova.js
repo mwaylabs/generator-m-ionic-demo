@@ -24,10 +24,28 @@ var runCordova = function (command, stream) {
     ]));
 };
 
+// CORDOVA
 gulp.task('cordova', runCordova);
 gulp.task('cordova-only-resources', ['resources'], runCordova);
 gulp.task('cordova-with-build', ['build', 'resources'], runCordova);
 
+// RESOURCES
+gulp.task('clean-res', function () {
+  return gulp.src('res/*/current/*')
+    .pipe(vinylPaths(del));
+});
+gulp.task('resources', ['clean-res'], function () {
+  var setFolder = options.res || 'default';
+
+  var resourceFiles = 'res/*/' + setFolder + '/**/*';
+  return gulp.src(resourceFiles)
+    .pipe($.rename(function (path) {
+      path.dirname = path.dirname.replace('/' + setFolder, '/current');
+    }))
+    .pipe(gulp.dest('res'));
+});
+
+// LIVERELOAD
 gulp.task('livereload', ['serve-livereload'], function () {
   // watch for changes in scss
   gulp.watch('app/*/styles/**/*.scss', ['styles']);
@@ -58,21 +76,4 @@ gulp.task('serve-livereload', ['cordova-prepare'], function (done) {
 });
 gulp.task('cordova-prepare', function () {
   return runCordova('prepare');
-});
-
-// Handle resources
-gulp.task('clean-res', function () {
-  return gulp.src('res/*/current/*')
-    .pipe(vinylPaths(del));
-});
-
-gulp.task('resources', ['clean-res'], function () {
-  var setFolder = options.res || 'default';
-
-  var resourceFiles = 'res/*/' + setFolder + '/**/*';
-  return gulp.src(resourceFiles)
-    .pipe($.rename(function (path) {
-      path.dirname = path.dirname.replace('/' + setFolder, '/current');
-    }))
-    .pipe(gulp.dest('res'));
 });

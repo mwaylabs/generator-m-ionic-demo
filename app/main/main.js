@@ -30,7 +30,7 @@ angular.module('main', [
         views: {
           'tab-list': {
             templateUrl: 'main/templates/list-detail.html',
-            controller: 'DetailCtrl as ctrl'
+            // controller: 'SomeCtrl as ctrl'
           }
         }
       })
