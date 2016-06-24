@@ -33,29 +33,10 @@ module.exports = function (context) {
   // TODO - Add back ignored option
   // TODO - Enable live reload servers
 
-  var platforms = ['android', 'ios'];
-  var patcher = new Patcher(context.opts.projectRoot, platforms);
+  var patcher = new Patcher(context.opts.projectRoot);
 
   console.log('\n\n\n\n hook3 \n\n\n\n\n');
-  var bs = cordovaBrowserSync.startBrowserSync(context.opts.projectRoot, platforms, function (defaults) {
-    console.log('\n\n\n\n hook4 \n\n\n\n\n');
-
-    // defaults.files.push({
-    //   match: ['www/**/*.*'],
-    //   fn: function (event, file) {
-    //     if (event === 'change') {
-    //       console.log('\n\n\n\n pre-reload \n\n\n\n\n');
-    //
-    //       context.cordova.raw.prepare().then(function () {
-    //         console.log('\n\n\n\n reload \n\n\n\n\n');
-    //         bs.reload();
-    //       });
-    //     }
-    //   }
-    // });
-
-    return defaults;
-  }, function (err, browserSyncValue) {
+  cordovaBrowserSync.startBrowserSync(context.opts.projectRoot, function (err, browserSyncValue) {
     patcher.patch({
       servers: browserSyncValue.servers
     });

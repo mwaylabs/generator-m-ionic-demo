@@ -13,12 +13,9 @@ function parseXml (filename) {
   return new et.ElementTree(et.XML(fs.readFileSync(filename, 'utf-8').replace(/^\uFEFF/, '')));
 }
 
-function Patcher (projectRoot, platforms) {
+function Patcher (projectRoot) {
   this.projectRoot = projectRoot || '.';
-  if (typeof platforms === 'string') {
-    platforms = platforms.split(',');
-  }
-  this.platforms = platforms || ['android', 'ios'];
+  this.platforms = ['android', 'ios'];
 
 }
 
@@ -45,10 +42,6 @@ Patcher.prototype.patch = function (opts) {
   opts = opts || {};
   this.copyStartPage(opts.servers);
   this.updateConfigXml();
-  // seems to work without fixATS (tested with iOS9)
-  if (this.platforms.indexOf('ios') !== -1) {
-    browserSyncPrimitives.fixATS(this.projectRoot, this.getProjectName());
-  }
 };
 
 module.exports = Patcher;

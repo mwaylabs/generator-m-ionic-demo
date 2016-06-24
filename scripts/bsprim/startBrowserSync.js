@@ -1,9 +1,6 @@
 'use strict';
 
-var path = require('path');
 var BrowserSync = require('browser-sync');
-var getWWWFolder = require('./getWWWFolder');
-
 
 /**
  * Private function that adds the code snippet to deal with reloading
@@ -32,12 +29,11 @@ function monkeyPatch () {
 /**
  * Starts the browser sync server.
  * @param {String} cordovaDir - File path to the root of the cordova project (where the platforms/ directory can be found)
- * @param {Array} platforms - Array of strings, each of which is a Cordova platform name to serve.
  * @param {Object} opts - Options Object to be passed to browserSync. If this is a function, the function is called with default values and should return the final options to be passed to browser-sync
  * @param {Function} cb - A callback when server is ready, calls with (err, servr_hostname)
  */
-function startBrowserSync (cordovaDir, platforms, opts, cb) {
-  var defaults = {
+function startBrowserSync (cordovaDir, cb) {
+  var bsOptions = {
     logFileChanges: true,
     logConnections: true,
     open: false,
@@ -54,33 +50,21 @@ function startBrowserSync (cordovaDir, platforms, opts, cb) {
     files: ['app', '.tmp'],
     server: {
       baseDir: ['app', '.tmp', 'platforms/ios/www/', 'platforms/android/assets/www/'],
+      // platform www's for cordova.js
       routes: {}
     }
   };
 
-  opts = opts || {};
-  if (typeof opts === 'function') {
-    opts = opts(defaults);
-  } else {
-    for (var key in defaults) {
-      if (typeof opts[key] === 'undefined') {
-        opts[key] = defaults[key];
-      }
-    }
-  }
-  console.log(JSON.stringify(opts, null, 2));
+  console.log(JSON.stringify(bsOptions, null, 2));
   var bsInstance = BrowserSync.create('cordova-browsersync');
-  bsInstance.init(opts, function (err, callbackBsInstance) {
+  bsInstance.init(bsOptions, function (err, callbackBsInstance) {
     var urls = callbackBsInstance.options.getIn(['urls']);
     console.log('\n\n\n urls: \n' + JSON.stringify(urls, null, 2), '\n\n\n');
-    var servers = {};
-    ['local', 'external', 'tunnel'].forEach(function (type) {
-      servers[type] = urls.get(type);
-    });
-    console.log(JSON.stringify(servers, null, 2));
     cb(err, {
       bsInstance: bsInstance,
-      servers: servers
+      servers: {
+        external: urls.get('external')
+      }
     });
   });
 
