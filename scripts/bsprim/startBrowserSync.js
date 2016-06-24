@@ -51,18 +51,12 @@ function startBrowserSync (cordovaDir, platforms, opts, cb) {
     },
     minify: false,
     watchOptions: {},
-    files: [],
+    files: ['app', '.tmp'],
     server: {
-      baseDir: [],
+      baseDir: ['app', '.tmp', 'platforms/ios/www/', 'platforms/android/assets/www/'],
       routes: {}
     }
   };
-
-  platforms.forEach(function (platform) {
-    var www = getWWWFolder(platform);
-    defaults.server.baseDir.push(path.join(www));
-    defaults.server.routes['/' + www] = path.join(cordovaDir, www);
-  });
 
   opts = opts || {};
   if (typeof opts === 'function') {

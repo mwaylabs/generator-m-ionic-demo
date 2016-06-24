@@ -3,12 +3,12 @@ patch.servers: {
   "external": "http://192.168.178.23:3000"
 }
 injectinIndex: {
-  "local": "http://localhost:3000/platforms/android/assets/www/index.html",
-  "external": "http://192.168.178.23:3000/platforms/android/assets/www/index.html"
+  "local": "http://localhost:3000",
+  "external": "http://192.168.178.23:3000"
 }
 {
-  "local": "http://localhost:3000/platforms/ios/www/index.html",
-  "external": "http://192.168.178.23:3000/platforms/ios/www/index.html"
+  "local": "http://localhost:3000",
+  "external": "http://192.168.178.23:3000"
 }
 
 options.urls: {
@@ -29,20 +29,16 @@ initOpts: {
   "minify": false,
   "watchOptions": {},
   "files": [
-    {
-      "match": [
-        "www/**/*.*"
-      ]
-    }
+    "app",
+    ".tmp"
   ],
   "server": {
     "baseDir": [
-      "platforms/android/assets/www",
-      "platforms/ios/www"
+      "app",
+      ".tmp",
+      "platforms/ios/www/",
+      "platforms/android/assets/www/"
     ],
-    "routes": {
-      "/platforms/android/assets/www": "/Users/jonathan/Projects/generator-m-ionic-demo/platforms/android/assets/www",
-      "/platforms/ios/www": "/Users/jonathan/Projects/generator-m-ionic-demo/platforms/ios/www"
-    }
+    "routes": {}
   }
 }

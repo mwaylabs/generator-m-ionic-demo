@@ -40,19 +40,19 @@ module.exports = function (context) {
   var bs = cordovaBrowserSync.startBrowserSync(context.opts.projectRoot, platforms, function (defaults) {
     console.log('\n\n\n\n hook4 \n\n\n\n\n');
 
-    defaults.files.push({
-      match: ['www/**/*.*'],
-      fn: function (event, file) {
-        if (event === 'change') {
-          console.log('\n\n\n\n pre-reload \n\n\n\n\n');
-
-          context.cordova.raw.prepare().then(function () {
-            console.log('\n\n\n\n reload \n\n\n\n\n');
-            bs.reload();
-          });
-        }
-      }
-    });
+    // defaults.files.push({
+    //   match: ['www/**/*.*'],
+    //   fn: function (event, file) {
+    //     if (event === 'change') {
+    //       console.log('\n\n\n\n pre-reload \n\n\n\n\n');
+    //
+    //       context.cordova.raw.prepare().then(function () {
+    //         console.log('\n\n\n\n reload \n\n\n\n\n');
+    //         bs.reload();
+    //       });
+    //     }
+    //   }
+    // });
 
     return defaults;
   }, function (err, browserSyncValue) {
