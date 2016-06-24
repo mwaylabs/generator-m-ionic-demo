@@ -2,33 +2,42 @@
 
 var path = require('path');
 var fs = require('fs');
-
 var et = require('elementtree'); // also included in gen-m/package.json
-var browserSyncPrimitives = require('../bsprim');
 
-
-var START_PAGE = 'browser-sync-start.html';
 
 function parseXml (filename) {
-  return new et.ElementTree(et.XML(fs.readFileSync(filename, 'utf-8').replace(/^\uFEFF/, '')));
+  return new et.ElementTree(et.XML(fs.readFileSync(filename, 'utf-8')));
 }
 
 function Patcher (projectRoot) {
   this.projectRoot = projectRoot || '.';
-  this.platforms = ['android', 'ios'];
-
 }
 
-Patcher.prototype.copyStartPage = function (servers) {
-  this.platforms.forEach(function (platform) {
-    var dest = path.join(this.projectRoot, browserSyncPrimitives.getWWWFolder(platform), START_PAGE);
-    browserSyncPrimitives.createIndexHtml(servers, platform, this.projectRoot, dest);
-  }, this);
-};
+Patcher.prototype.patchConfigXml = function (externalUrl) {
+  var platforms = ['android', 'ios'];
+  platforms.forEach(function (platform) {
 
-Patcher.prototype.updateConfigXml = function () {
-  this.platforms.forEach(function (platform) {
-    browserSyncPrimitives.updateConfigXml(this.projectRoot, platform, this.getProjectName(), START_PAGE);
+    var CONFIG_LOCATION = {
+      android: 'res/xml',
+      ios: this.getProjectName()
+    };
+
+    var configXmlPath = path.join(this.projectRoot, 'platforms', platform, CONFIG_LOCATION[platform], 'config.xml');
+
+    var configXml = parseXml(configXmlPath);
+
+    var contentTag = configXml.find('content[@src]');
+    if (contentTag) {
+      contentTag.attrib.src = externalUrl;
+    }
+
+    // Add allow-navigation element so that http:// files will not launch an external browser.
+    var allowNavTag = et.SubElement(configXml.find('.'), 'allow-navigation');
+    allowNavTag.set('href', '*');
+
+    fs.writeFileSync(configXmlPath, configXml.write({
+      indent: 4
+    }), 'utf-8');
   }, this);
 };
 
@@ -38,9 +47,5 @@ Patcher.prototype.getProjectName = function () {
   return nameTag.text;
 };
 
-Patcher.prototype.patch = function (servers) {
-  this.copyStartPage(servers);
-  this.updateConfigXml();
-};
 
 module.exports = Patcher;
