@@ -9,20 +9,21 @@ var getWWWFolder = require('./getWWWFolder');
  * Private function that adds the code snippet to deal with reloading
  * files when they are served from platform folders
  */
-function monkeyPatch() {
-  var script = function() {
+/*global window*/
+function monkeyPatch () {
+  var script = function () {
     window.__karma__ = true;
-    (function patch() {
+    (function patch () {
       if (typeof window.__bs === 'undefined') {
         window.setTimeout(patch, 500);
       } else {
         var oldCanSync = window.__bs.prototype.canSync;
-        window.__bs.prototype.canSync = function(data, optPath) {
-          data.url = window.location.pathname.substr(0, window.location.pathname.indexOf('/www')) + data.url.substr(data.url.indexOf('/www'))
+        window.__bs.prototype.canSync = function (data, optPath) {
+          data.url = window.location.pathname.substr(0, window.location.pathname.indexOf('/www')) + data.url.substr(data.url.indexOf('/www'));
           return oldCanSync.apply(this, [data, optPath]);
         };
       }
-    }());
+    })();
   };
   return '<script>(' + script.toString() + '());</script>';
 }
@@ -35,7 +36,7 @@ function monkeyPatch() {
  * @param {Object} opts - Options Object to be passed to browserSync. If this is a function, the function is called with default values and should return the final options to be passed to browser-sync
  * @param {Function} cb - A callback when server is ready, calls with (err, servr_hostname)
  */
-function startBrowserSync(cordovaDir, platforms, opts, cb) {
+function startBrowserSync (cordovaDir, platforms, opts, cb) {
   var defaults = {
     logFileChanges: true,
     logConnections: true,
@@ -43,7 +44,7 @@ function startBrowserSync(cordovaDir, platforms, opts, cb) {
     snippetOptions: {
       rule: {
         match: /<\/body>/i,
-        fn: function(snippet, match) {
+        fn: function (snippet, match) {
           return monkeyPatch() + snippet + match;
         }
       }
@@ -57,7 +58,7 @@ function startBrowserSync(cordovaDir, platforms, opts, cb) {
     }
   };
 
-  platforms.forEach(function(platform) {
+  platforms.forEach(function (platform) {
     var www = getWWWFolder(platform);
     defaults.server.baseDir.push(path.join(www));
     defaults.server.routes['/' + www] = path.join(cordovaDir, www);
@@ -73,15 +74,16 @@ function startBrowserSync(cordovaDir, platforms, opts, cb) {
       }
     }
   }
-
+  console.log(JSON.stringify(opts, null, 2));
   var bsInstance = BrowserSync.create('cordova-browsersync');
-  bsInstance.init(opts, function(err, callbackBsInstance) {
+  bsInstance.init(opts, function (err, callbackBsInstance) {
     var urls = callbackBsInstance.options.getIn(['urls']);
+    console.log('\n\n\n urls: \n' + JSON.stringify(urls, null, 2), '\n\n\n');
     var servers = {};
-    ['local', 'external', 'tunnel'].forEach(function(type) {
+    ['local', 'external', 'tunnel'].forEach(function (type) {
       servers[type] = urls.get(type);
     });
-
+    console.log(JSON.stringify(servers, null, 2));
     cb(err, {
       bsInstance: bsInstance,
       servers: servers

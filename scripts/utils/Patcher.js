@@ -45,6 +45,7 @@ Patcher.prototype.patch = function (opts) {
   opts = opts || {};
   this.copyStartPage(opts.servers);
   this.updateConfigXml();
+  // seems to work without fixATS (tested with iOS9)
   if (this.platforms.indexOf('ios') !== -1) {
     browserSyncPrimitives.fixATS(this.projectRoot, this.getProjectName());
   }
