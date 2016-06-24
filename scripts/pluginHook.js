@@ -5,24 +5,9 @@
 var Patcher = require('./utils/Patcher');
 var bs = require('browser-sync').create('m-ionic:livereload');
 
-function parseOptions (opts) {
-  var result = {};
-  opts = opts || [];
-  opts.forEach(function (opt) {
-    var parts = opt.split(/=/);
-    result[parts[0].replace(/^-+/, '')] = parts[1] || true;
-  });
-  return result;
-}
-
 module.exports = function (context) {
 
-  console.log('\n\n\n\n hook2 \n\n\n\n\n');
-  console.log(context.opts.options.argv);
-
-  var options = parseOptions(context.opts.options.argv);
-  console.log(options);
-  if (typeof options['livereload'] === 'undefined') {
+  if (context.opts.options.argv.indexOf('--livereload') < 0) {
     console.log('return!!!');
     return;
   }
@@ -45,6 +30,8 @@ module.exports = function (context) {
     }
     var urls = bsInstance.options.getIn(['urls']);
     var patcher = new Patcher(context.opts.projectRoot);
+    // patch platform's config xml to allow navigation to
+    // & to set content tag to bs externalUrl
     patcher.patchConfigXml(urls.get('external'));
   });
 };

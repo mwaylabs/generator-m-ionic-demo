@@ -4,14 +4,13 @@ var path = require('path');
 var fs = require('fs');
 var et = require('elementtree'); // also included in gen-m/package.json
 
-
-function parseXml (filename) {
-  return new et.ElementTree(et.XML(fs.readFileSync(filename, 'utf-8')));
-}
-
 function Patcher (projectRoot) {
   this.projectRoot = projectRoot || '.';
 }
+
+Patcher.prototype.parseXml = function (filename) {
+  return new et.ElementTree(et.XML(fs.readFileSync(filename, 'utf-8')));
+};
 
 Patcher.prototype.patchConfigXml = function (externalUrl) {
   var platforms = ['android', 'ios'];
@@ -19,19 +18,19 @@ Patcher.prototype.patchConfigXml = function (externalUrl) {
 
     var CONFIG_LOCATION = {
       android: 'res/xml',
+      // retrieve project name which is necessary for ios config.xml path
       ios: this.getProjectName()
     };
 
+    // retrieve platform's path to config.xml & parse it
     var configXmlPath = path.join(this.projectRoot, 'platforms', platform, CONFIG_LOCATION[platform], 'config.xml');
+    var configXml = this.parseXml(configXmlPath);
 
-    var configXml = parseXml(configXmlPath);
-
+    // set content src attrib to externalUrl
     var contentTag = configXml.find('content[@src]');
-    if (contentTag) {
-      contentTag.attrib.src = externalUrl;
-    }
+    contentTag.attrib.src = externalUrl;
 
-    // Add allow-navigation element so that http:// files will not launch an external browser.
+    // Add allow-navigation element so it's possible to navigate to externalUrl
     var allowNavTag = et.SubElement(configXml.find('.'), 'allow-navigation');
     allowNavTag.set('href', '*');
 
@@ -42,7 +41,7 @@ Patcher.prototype.patchConfigXml = function (externalUrl) {
 };
 
 Patcher.prototype.getProjectName = function () {
-  var parsedConfigXML = parseXml(path.join(this.projectRoot, 'config.xml'));
+  var parsedConfigXML = this.parseXml(path.join(this.projectRoot, 'config.xml'));
   var nameTag = parsedConfigXML.find('name');
   return nameTag.text;
 };
