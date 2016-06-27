@@ -10,7 +10,7 @@ var process = require('process');
 var del = require('del');
 var vinylPaths = require('vinyl-paths');
 var bs = require('browser-sync').create('m-ionic:livereload');
-var Patcher = require('./Patcher');
+var Patcher = require('./utils/Patcher');
 
 var runCordova = function (command, stream) {
   // allow to overwrite command from option.cordova with parameter

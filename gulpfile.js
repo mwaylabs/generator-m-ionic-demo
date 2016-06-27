@@ -75,6 +75,7 @@ gulp.task('default', function () {
   else if (options.cordova) {
     return gulp.start('cordova');
   }
+  // livereload command
   else if (options.livereload) {
     options.build = false; // build not necessary, take whatever's in www
     return gulp.start('livereload');
