@@ -12,7 +12,9 @@ Development:
 ## What's this?
 
 <p align="center">
-  <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+  <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
+    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+  </a>
 </p>
 
 > This project was generated with the awesome [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) to show all the latest features. Please report any issues to the initial [repository](https://github.com/mwaylabs/generator-m-ionic) .
