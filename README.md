@@ -57,7 +57,7 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 # My Project
 This project was generated with Generator-M-Ionic v1.9.1. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
-# Generator-M-Ionic v1.9.1
+# Generator-M-Ionic v1.9.2
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
@@ -79,7 +79,9 @@ Development:
 
 ## Why you need it
 <p align="center">
-  <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+  <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
+    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+  </a>
 </p>
 
 > **Advanced workflows for building rock-solid Ionic apps**: develop, prototype, test, build and deliver high quality apps with Yeoman, Gulp, Bower, Angular, Cordova and of course Ionic. All in one sexy generator.
