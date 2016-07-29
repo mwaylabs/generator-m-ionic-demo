@@ -45,7 +45,7 @@
     "lodash": "^4.3.0",
     "main-bower-files": "^2.9.0",
     "minimist": "^1.2.0",
-    "phantomjs-prebuilt": "^2.1.4",
+    "phantomjs-prebuilt": "^2.1.9",
     "plist": "^1.1.0",
     "proxy-middleware": "^0.15.0",
     "require-dir": "^0.3.0",
