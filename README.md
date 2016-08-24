@@ -53,9 +53,8 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 
 ---
 
-
 # My Project
-This project was generated with Generator-M-Ionic v1.9.1. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
+This project was generated with Generator-M-Ionic v1.9.2. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
 # Generator-M-Ionic v1.9.2
 
@@ -108,7 +107,7 @@ Development:
     <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041199/5978cb96-ac7a-11e4-9568-829e2ea4312f.png">
   </a>
   <a href="http://ionicframework.com/" target="_blank" alt="ionic" title="ionic">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041296/59c5717a-ac7b-11e4-9d5d-9c5232aace64.png">
+    <img height="100" src="https://cloud.githubusercontent.com/assets/1134310/17360098/b5975f2e-5961-11e6-8a13-70d258d35ffe.png">
   </a>
   <a href="http://cordova.apache.org/" target="_blank" alt="cordova" title="cordova">
     <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041269/20ed1196-ac7b-11e4-8707-68fa331f1aeb.png">
@@ -137,7 +136,15 @@ Development:
 **[Read more ...](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/whats_in_the_box.md)**
 
 ### What's new
-1.9.0
+**Ionic Blog Series** - Great ride through everything Generator-M-Ionic has to offer:
+> Advanced workflows for building rock-solid Ionic Apps
+
+  - [Part 1: Playground](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-1/)
+  - [Part 2: Mountain](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-2/)
+  - [Part 3: Orbit](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-3/)
+
+
+**1.9.0**
 - **Livereload** for the device! Wohoo! See [how it's done](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md#run-on-device-or-emulator-with-livereload).
 - **Testing workflow** improvements
   - **Precommit hooks** and others in a new [Husky Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing_workflow.md)
