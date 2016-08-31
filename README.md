@@ -146,18 +146,13 @@ Development:
 
 **1.9.0**
 - **Livereload** for the device! Wohoo! See [how it's done](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md#run-on-device-or-emulator-with-livereload).
-- **Testing workflow** improvements
-  - **Precommit hooks** and others in a new [Husky Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing_workflow.md)
-  - **gulp protractor** now returns, allowing it to be used with husky, travis, jenkins, ...
-- **Questions** the generator asks are documented and explained in the [Questions](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/questions.md) document
 - [read more ...](https://github.com/mwaylabs/generator-m-ionic/releases/tag/1.9.0)
 
-## Quick Start
+## Guides
+##### Quick Start
 - [Quick Start](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/quick_start.md) for the experienced developer.
 - [Try the demo](https://github.com/mwaylabs/generator-m-ionic-demo). Get a quick impression by cloning the sample project generated with the latest version of Generator-M-Ionic.
 
-
-## Guides
 ##### Setup
 - [Installation and Prerequisites](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/installation_prerequisites.md)
 - [Questions](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/questions.md) the generator will ask and what they mean
@@ -186,9 +181,12 @@ Development:
 
 ##### Building & Continuous Integration
 - [Build Vars](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/build_vars.md), inject vars into your app at build time.
-- [Programmatically change the `config.xml`](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md), an essential part for a successful continuous integration setup. Add environments and build vars for a full blown continuous integration use case!
+- [Programmatically change the `config.xml`](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md), with `gulp config` an essential part for a successful continuous integration setup.
+- [Full-blown Continuous Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ci.md) - putting it all together: environments, build vars and `gulp config`!
+- [Greenhouse & Relution Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/greenhouse.md) - build and distribute your apps using these cloud services
 
 ##### Ecosystems
+- [Greenhouse & Relution](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/greenhouse.md) - create the `greenhouse.sh` file for integration with Greenhouse & Relution
 - [Ionic Platform](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/ionic_platform.md) (beta) - A cloud platform for managing and scaling cross-platform mobile apps
 - [Appmobi](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/appmobi.md) - Secure Mobile Development Platform
 - [ApiOmat](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/apiomat.md) (beta) - Enterprise Backend as a Service
