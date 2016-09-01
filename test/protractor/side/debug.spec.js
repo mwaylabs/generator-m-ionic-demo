@@ -25,5 +25,6 @@ describe('Debug page', function () {
     passwordInput.sendKeys('tesyasdft');
     expect(passwordStrength.getInnerHtml()).toEqual('strong');
     expect(passwordStrength.getAttribute('class')).toContain('badge-balanced');
+
   });
 });
