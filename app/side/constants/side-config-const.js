@@ -6,7 +6,7 @@ angular.module('side')
   ENV: {
     /*inject-env*/
     'SERVER_URL': 'https://DEVSERVER/api',
-    'SOME_OTHER_URL': '/proxy'
+    'SOME_OTHER_URL': '/postman-proxy'
     /*endinject*/
   },
 
