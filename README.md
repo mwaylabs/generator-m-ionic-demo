@@ -54,9 +54,9 @@ Head over to the Generator-M-Ionic [repository](https://github.com/mwaylabs/gene
 ---
 
 # My Project
-This project was generated with Generator-M-Ionic v1.9.2. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
+This project was generated with Generator-M-Ionic v1.10.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
-# Generator-M-Ionic v1.9.2
+# Generator-M-Ionic v1.10.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
@@ -79,7 +79,7 @@ Development:
 ## Why you need it
 <p align="center">
   <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
-    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/master/docs/resources/logo.png">
   </a>
 </p>
 
@@ -143,8 +143,13 @@ Development:
   - [Part 2: Mountain](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-2/)
   - [Part 3: Orbit](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-3/)
 
+**v1.10**
+- Support for **multiple proxies** and **Cordova Browser** platform
+- **Integrations** into [Ionic Cloud](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/ecosystems/ionic_platform.md), [Relution & Greenhouse](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/greenhouse.md)
+- Full **Continuous Integration** Guide
+- [read more ...](https://github.com/mwaylabs/generator-m-ionic/releases/tag/1.10.0)
 
-**1.9.0**
+**v1.9**
 - **Livereload** for the device! Wohoo! See [how it's done](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md#run-on-device-or-emulator-with-livereload).
 - [read more ...](https://github.com/mwaylabs/generator-m-ionic/releases/tag/1.9.0)
 
@@ -183,11 +188,11 @@ Development:
 - [Build Vars](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/build_vars.md), inject vars into your app at build time.
 - [Programmatically change the `config.xml`](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md), with `gulp config` an essential part for a successful continuous integration setup.
 - [Full-blown Continuous Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ci.md) - putting it all together: environments, build vars and `gulp config`!
-- [Greenhouse & Relution Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/greenhouse.md) - build and distribute your apps using these cloud services
+- [Greenhouse & Relution Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/greenhouse.md) - build and distribute your apps using these powerful cloud services
 
 ##### Ecosystems
-- [Greenhouse & Relution](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/greenhouse.md) - create the `greenhouse.sh` file for integration with Greenhouse & Relution
-- [Ionic Platform](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/ionic_platform.md) (beta) - A cloud platform for managing and scaling cross-platform mobile apps
+- [Greenhouse & Relution](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/greenhouse.md) - build and distribute your apps using these powerful cloud services
+- [Ionic Cloud](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/ionic_platform.md) (beta) - a powerful suite of hybrid-focused mobile backend services and tools
 - [Appmobi](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/appmobi.md) - Secure Mobile Development Platform
 - [ApiOmat](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/apiomat.md) (beta) - Enterprise Backend as a Service
 
