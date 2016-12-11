@@ -7,7 +7,7 @@
     "test": "gulp build --minify && gulp karma"
   },
   "devDependencies": {
-    "browser-sync": "^2.8.3",
+    "browser-sync": "^2.18.5",
     "chalk": "^1.1.0",
     "cordova": "^6.0.0",
     "del": "^2.0.0",
