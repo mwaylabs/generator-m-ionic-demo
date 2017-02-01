@@ -4,11 +4,11 @@
     "angular": "~1.5.0",
     "angular-animate": "~1.5.0",
     "angular-sanitize": "~1.5.0",
-    "angular-ui-router": "~0.3.1",
-    "ngCordova": "~0.1.17-alpha",
-    "angular-dynamic-locale": "~0.1.27",
-    "angular-translate": "~2.11.0",
-    "angular-translate-loader-static-files": "~2.11.0",
+    "angular-ui-router": "~0.4.2",
+    "ngCordova": "~0.1.27-alpha",
+    "angular-dynamic-locale": "~0.1.32",
+    "angular-translate": "~2.13.0",
+    "angular-translate-loader-static-files": "~2.13.0",
     "localforage": "~1.4.0"
   },
   "devDependencies": {
@@ -18,7 +18,7 @@
     "angular": "~1.5.0",
     "angular-animate": "~1.5.0",
     "angular-sanitize": "~1.5.0",
-    "angular-ui-router": "~0.3.1"
+    "angular-ui-router": "~0.4.2"
   },
   "name": "my-project",
   "private": true
