@@ -6,22 +6,22 @@ node_js:
   - "6"
   - "5"
   - "4"
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+# addons:
+#   apt:
+#     sources:
+#       - google-chrome
+#     packages:
+#       - google-chrome-stable
 before_install:
   - npm install -g bower
 install:
   - npm install
   - bower install
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - npm i -g npm@^3
-  - sleep 3 # give xvfb some time to start
+# before_script:
+#   - export DISPLAY=:99.0
+#   - sh -e /etc/init.d/xvfb start
+#   - npm i -g npm@^3
+#   - sleep 3 # give xvfb some time to start
 notifications:
   email: false
   slack:
