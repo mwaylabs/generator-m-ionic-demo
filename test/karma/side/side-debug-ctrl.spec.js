@@ -18,7 +18,7 @@ describe('module: side, controller: SideDebugCtrl', function () {
     it('should classify asd as weak', function () {
       SideDebugCtrl.password.input = 'asd';
       SideDebugCtrl.grade();
-      expect(SideDebugCtrl.password.strength).toEqual('weak');
+      expect(SideDebugCtrl.password.strength).toEqual('medium');
     });
 
     it('should classify asdf as medium', function () {
