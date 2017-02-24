@@ -32,3 +32,9 @@
 # webstorm
 /.idea/workspace.xml
 /.idea/libraries
+
+# yarn
+yarn.lock
+
+# npm
+npm-debug.log
