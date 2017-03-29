@@ -1,4 +1,6 @@
 # Generator-M-Ionic-Demo
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mwaylabs/generator-m-ionic-demo.svg)](https://greenkeeper.io/)
 [travis-demo-url]: https://travis-ci.org/mwaylabs/generator-m-ionic-demo
 
 [![Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic-demo/master.svg?style=flat-square)][travis-demo-url]
