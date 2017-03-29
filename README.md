@@ -1,13 +1,16 @@
 # Generator-M-Ionic-Demo
+
 [travis-demo-url]: https://travis-ci.org/mwaylabs/generator-m-ionic-demo
 
 [![Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic-demo/master.svg?style=flat-square)][travis-demo-url]
 [![Dependency Status](https://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/master.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic-demo#info=devDependencies&view=table)
 
+
 Development:
 
 [![Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic-demo/dev.svg?style=flat-square)][travis-demo-url]
 [![Dependency Status](http://img.shields.io/david/dev/mwaylabs/generator-m-ionic-demo/dev.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic-demo/dev#info=devDependencies&view=table)
+[![Greenkeeper badge](https://badges.greenkeeper.io/mwaylabs/generator-m-ionic-demo.svg)](https://greenkeeper.io/)
 
 ## What's this?
 
