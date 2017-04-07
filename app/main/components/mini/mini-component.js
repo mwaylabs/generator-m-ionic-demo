@@ -5,13 +5,14 @@ angular.module('main')
   restrict: 'EA',
   transclude: true,
   bindings: {
-    content: '=',
+    content: '=', // bind via attribute
   },
-  controllerAs: 'ctrl',
+  controllerAs: 'ctrl', // enable controllerAs syntax
   controller: function (
     $scope,
     $state
   ) {
+    // retrieve some info via dependency injection
     this.currentState = $state.current.name;
   }
 });
