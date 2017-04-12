@@ -3,7 +3,7 @@
 describe('Debug page', function () {
 
   beforeEach(function () {
-    browser.get('/#/side/debug');
+    browser.get('#/side/debug');
   });
 
   it('should grade passwords', function () {
