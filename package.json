@@ -59,7 +59,7 @@
     "lodash": "^4.3.0",
     "main-bower-files": "^2.9.0",
     "minimist": "^1.2.0",
-    "phantomjs-prebuilt": "^2.1.4",
+    "phantomjs-prebuilt": "^2.1.15",
     "plist": "git://github.com/akofman/plist.js.git#3f256fd21ab3ad3ada0f491cfc905098a2631342",
     "protractor": "^5.1.1",
     "proxy-middleware": "^0.15.0",
