@@ -22,7 +22,7 @@
     "cordova": "~6.5.0",
     "del": "^2.0.0",
     "elementtree": "^0.1.6",
-    "eslint": "^3.0.0",
+    "eslint": "^4.5.0",
     "gulp": "^3.9.0",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-autoprefixer": "^3.0.1",
