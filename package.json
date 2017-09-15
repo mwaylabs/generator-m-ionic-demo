@@ -33,7 +33,7 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
-    "gulp-inject": "^4.0.0",
+    "gulp-inject": "^4.3.0",
     "gulp-jsonlint": "^1.1.0",
     "gulp-load-plugins": "^1.0.0-rc",
     "gulp-natural-sort": "^0.1.0",
