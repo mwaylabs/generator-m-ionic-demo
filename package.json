@@ -67,7 +67,7 @@
     "vinyl-paths": "^2.0.0",
     "wiredep": "^4.0.0",
     "xml2js": "^0.4.9",
-    "yeoman-test": "^1.1.0"
+    "yeoman-test": "^1.8.0"
   },
   "generator-m-ionic": {
     "proxies": [
