@@ -25,7 +25,7 @@
     "eslint": "^3.0.0",
     "gulp": "^3.9.0",
     "gulp-angular-filesort": "^1.1.1",
-    "gulp-autoprefixer": "^3.0.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-changed": "^2.0.0",
     "gulp-csso": "^3.0.0",
     "gulp-eslint": "^3.0.0",
