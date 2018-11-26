@@ -63,7 +63,7 @@
     "plist": "git://github.com/akofman/plist.js.git#3f256fd21ab3ad3ada0f491cfc905098a2631342",
     "protractor": "^5.1.1",
     "proxy-middleware": "^0.15.0",
-    "require-dir": "^0.3.0",
+    "require-dir": "^1.2.0",
     "vinyl-paths": "^2.0.0",
     "wiredep": "^4.0.0",
     "xml2js": "^0.4.9",
