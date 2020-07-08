@@ -1,3 +1,6 @@
+## We moved on! This project is not longer maintained from our side. 
+It is still here for sake of completeness.
+
 # Generator-M-Ionic-Demo
 
 [travis-demo-url]: https://travis-ci.org/mwaylabs/generator-m-ionic-demo
